@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import 'normalize.css'
 import Home from './pages/home/homePage-Component'
+import { Routes,Route } from "react-router-dom";
 
 
 function App() {
@@ -8,7 +9,9 @@ function App() {
 
     <div className="App">
       <GlobalStyle/>
-      <Home/>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+      </Routes>
     </div>
   );
 }
@@ -22,8 +25,11 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     --font-primary :'Raleway', sans-serif;
     --primary-ccolor: #FF385C;
-    --text-color-dark: #22222;
+    --text-color-dark:#222222;
+    --text-color-light:#717171;
+    --box-shadow:#d1d0d0;
     --light-grey :#DDDDDD;
+    
  }
 
  *,*::before, *::after{
@@ -32,7 +38,12 @@ const GlobalStyle = createGlobalStyle`
 
  body{
   font-family: var(--font-primary);
+  color: var(--text-color-light);
  }
+/* 
+ *{
+  border:1px solid red;
+ } */
 
 
 
