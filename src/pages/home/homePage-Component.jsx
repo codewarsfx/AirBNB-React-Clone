@@ -1,12 +1,13 @@
 import styled from "styled-components"
-import SearchButton from "../../components/search/searchComponet"
+import Header from "../../components/Header/headerComponent"
+
 
 const Home = ()=>{
 
    return (
 
     <Container>
-            <SearchButton/>
+            <Header/>
     </Container>
 
    )
@@ -21,6 +22,5 @@ const Home = ()=>{
 const Container = styled.div`
     width: 85%;
     margin:auto ;
-
 
 `

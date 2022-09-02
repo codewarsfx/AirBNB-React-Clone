@@ -1,10 +1,7 @@
 import styled from "styled-components";
-import {GoSearch} from "react-icons/go"
-import { Link } from "react-router-dom";
-import Navigation from "../Nav/NavComponent";
+
 
 const SearchButton =  ()=>{
-
 
     return(
     <>
@@ -24,7 +21,6 @@ const SearchButton =  ()=>{
                 <svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{"display": "block",height: "16px", width: "16px", fill:"rgb(34, 34, 34)"}}><path d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
             </FilterIconContainer>
         </Container>
-        <Navigation/>
     </>
     )
 
@@ -34,7 +30,6 @@ const SearchButton =  ()=>{
 }
 
 const Container= styled.div`
-    margin-top: 15px;
     padding: 10px 0;
     display: flex;
     align-items: center;
@@ -42,7 +37,7 @@ const Container= styled.div`
     box-shadow: 2px 1px 5px var(--box-shadow);
     border: 1px solid var(--light-grey);
     border-radius:30px;
-    max-width: 350px;
+    min-width: 350px;
 `
 
 

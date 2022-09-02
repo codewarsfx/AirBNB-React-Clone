@@ -47,7 +47,7 @@ const NavLink = styled(Link)`
 const NavButton = styled.div`
 cursor: pointer;
 border: 1px solid var(--light-grey);
-padding: 3px 0;
+padding: 5px 0 5px 5px ;
 display: flex;
 justify-content: space-around;
 align-items: center;
