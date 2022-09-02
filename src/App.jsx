@@ -29,7 +29,6 @@ const GlobalStyle = createGlobalStyle`
     --text-color-light:#717171;
     --box-shadow:#d1d0d0;
     --light-grey :#DDDDDD;
-    
  }
 
  *,*::before, *::after{
@@ -41,9 +40,9 @@ const GlobalStyle = createGlobalStyle`
   color: var(--text-color-light);
  }
 
- /* *{
+ *{
   border:1px solid red;
- } */
+ }
 
 
 
