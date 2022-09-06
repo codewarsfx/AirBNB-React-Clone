@@ -22,20 +22,22 @@ const moveleft =()=>{
 }
 
 return (
-  <div className="container">
+  <div className="slide-container">
       {moveby > -200? <span className="arrow-container arrow-right" onClick={moveright} ><GoChevronRight/></span> : null}
       {moveby !== 0 ? <span className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></span>:null} 
   <div className="row__grid" >
-    <div className="xy" style={{transform: `translateX(${moveby}%)`}}>
-       <div>
-          <a href="/">
-                <img src='/assests/img/Design.png' alt="design" />
+    <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`}}>
+          <a href="/" className='slide-element-link'>
+                <div className='slide-img'><img src='/assests/img/Design.png'  alt="design" /></div>
                 <span>Design</span>
           </a>
-       </div>
+          <a href="/" className='slide-element-link'>
+                <div className='slide-img'><img src='/assests/img/Surfing.png'  alt="design" /></div>
+                <span>Surfing</span>
+          </a>
     </div>
-    <div className="xy" style={{transform: `translateX(${moveby}%)`}}></div>
-    <div className="xy" style={{transform: `translateX(${moveby}%)`, backgroundColor: `yellow`}}></div>
+    <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`}}></div>
+    <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`, backgroundColor: `yellow`}}></div>
   </div>
   </div>
 )
