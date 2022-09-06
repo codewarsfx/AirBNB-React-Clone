@@ -1,14 +1,18 @@
-import styled from "styled-components"
-import Header from "../../components/Header/headerComponent"
+// import styled from "styled-components"
+// import Header from "../../components/Header/headerComponent"
+import Slider from "../../Slider/slider"
+
 
 
 const Home = ()=>{
 
    return (
 
-    <Container>
-            <Header/>
-    </Container>
+    <>
+            {/* <Header/> */}
+            <Slider/>
+
+    </>
 
    )
    
@@ -19,8 +23,8 @@ const Home = ()=>{
 
 
 
-const Container = styled.div`
-    width: 85%;
-    margin:auto ;
+// const Container = styled.div`
+//     width: 85%;
+//     margin:auto ;
 
-`
+// `

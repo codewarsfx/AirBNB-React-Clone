@@ -1,0 +1,60 @@
+.row__grid{ 
+    display: flex;
+    min-height: 10vh;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .container{
+    position: relative;
+  }
+
+  .row__grid::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+  }
+
+.xy{
+   min-width: 100%;
+   display: grid;
+   grid-template-columns:repeat(12,1fr);
+   transition: transform .4s ease-out;
+   background-color:blue;
+}
+.xy:not(:first-child){
+  background-color: green;
+}
+
+.green{
+  background-color: greenyellow;
+}
+
+.arrow-container{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top:50%;
+  margin: -15px;
+  border: 1px solid rgb(154, 154, 154);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.arrow-left{
+  left: 2%;
+}
+
+.arrow-right{
+  right: 2%;
+}
+
+
+
+
