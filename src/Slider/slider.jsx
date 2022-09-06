@@ -2,6 +2,7 @@
 import './slider.css'
 import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
 import { useState } from 'react'
+import SideLink from '../components/SlideLink/slidelink'
 // import { useRef, useState,useEffect } from 'react'
 
 
@@ -27,14 +28,6 @@ return (
       {moveby !== 0 ? <span className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></span>:null} 
   <div className="row__grid" >
     <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`}}>
-          <a href="/" className='slide-element-link'>
-                <div className='slide-img'><img src='/assests/img/Design.png'  alt="design" /></div>
-                <span>Design</span>
-          </a>
-          <a href="/" className='slide-element-link'>
-                <div className='slide-img'><img src='/assests/img/Surfing.png'  alt="design" /></div>
-                <span>Surfing</span>
-          </a>
     </div>
     <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`}}></div>
     <div className="slide-element-group" style={{transform: `translateX(${moveby}%)`, backgroundColor: `yellow`}}></div>
@@ -43,6 +36,13 @@ return (
 )
 
 }
+
+
+const SlideContainer = styled.div`
+  
+
+  
+`
 
 
 export default Slider
