@@ -65,7 +65,7 @@ return (
 const Container = styled.div`
   display:flex;
   justify-content: space-between;
-  max-width: 1250px;
+  max-width: 1280px;
   margin: 30px auto;
 
 `
@@ -106,7 +106,7 @@ const SlideContainerWindow = styled.div`
 const SlideElementGroup = styled.div`
    min-width: 100%;
    display:flex;
-   transition: transform .4s ease-out;
+   transition: transform .7s ease-out;
    justify-content:space-between;
 `
 
@@ -127,7 +127,7 @@ const SlideArrowIcon  = styled.div`
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0px 0px 10px 30px rgba(255,255,255,0.9);
+  box-shadow: 0px 0px 10px 20px rgba(255,255,255,0.9);
 `
 
 const SlideArrowIconLeft = styled(SlideArrowIcon)`

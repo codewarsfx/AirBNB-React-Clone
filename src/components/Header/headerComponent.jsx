@@ -21,7 +21,7 @@ const HeaderContainer =styled.header`
     align-items: center;
     min-height:80px;
     justify-content: space-between;
-    max-width: 1250px;
+    max-width: 1300px;
     margin:auto;
 `
 
