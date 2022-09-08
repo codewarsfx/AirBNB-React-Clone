@@ -1,6 +1,6 @@
-// import styled from "styled-components"
-// import Header from "../../components/Header/headerComponent"
-import Slider from "../../Slider/slider"
+import styled from "styled-components"
+import Header from "../../components/Header/headerComponent"
+import Slider from "../../components/Slider/slider"
 
 
 
@@ -9,9 +9,9 @@ const Home = ()=>{
    return (
 
     <>
-            {/* <Header/> */}
+            <Header/>
+            <hr style={{border: '.3px solid #DDDDDD'}} />
             <Slider/>
-
     </>
 
    )
@@ -19,12 +19,3 @@ const Home = ()=>{
    }
    
    export default Home
-
-
-
-
-// const Container = styled.div`
-//     width: 85%;
-//     margin:auto ;
-
-// `

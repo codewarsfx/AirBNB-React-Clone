@@ -18,6 +18,7 @@ const SlideElement = styled(Link)`
   align-items: center;
   text-decoration: none;
   padding: .3em;
+  transition: transform .4s ease-out;
 
   span{  
     font-size: 12px;
@@ -28,8 +29,8 @@ const SlideElement = styled(Link)`
 `
 
 const LinkImageContaier = styled.div`
-     width: 25px;
-     height: 25px;
+     width: 24px;
+     height: 24px;
 
      img{
         width: 100%;

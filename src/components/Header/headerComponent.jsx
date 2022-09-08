@@ -19,8 +19,10 @@ const Header = ()=>{
 const HeaderContainer =styled.header`
     display: flex;
     align-items: center;
-    min-height:90px;
+    min-height:80px;
     justify-content: space-between;
+    max-width: 1250px;
+    margin:auto;
 `
 
 
