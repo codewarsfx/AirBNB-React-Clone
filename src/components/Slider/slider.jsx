@@ -1,6 +1,6 @@
 
 import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SideLink from '../SlideLink/slidelink'
 import styled from "styled-components"
 
@@ -19,6 +19,27 @@ const Icondata =[
 
 const Slider =()=>{
   const [moveby,setmoveby] = useState(0)
+  const [showShadow,setShadow] = useState(false)
+
+
+
+  //controls display of box shadow 
+  useEffect(()=>{
+
+      const boxShadowEvent = window.addEventListener("scroll",()=>{
+        if (window.scrollY > 10){
+          setShadow(true)
+        }
+        else{
+          setShadow(false)
+        }
+      })
+
+      return window.removeEventListener(boxShadowEvent,()=>{
+        console.log("window has stopped listening for boxShadowEvent")
+      })
+
+  })
 
 
   const moveright=()=>{
@@ -34,41 +55,56 @@ const Slider =()=>{
   }
 
 return (
-  <Container>
-    <SlideContainer>
-        {moveby > -200 ? <SlideArrowIconRight onClick={moveright} ><GoChevronRight/></SlideArrowIconRight> : null}
-        {moveby !== 0 ? <SlideArrowIconLeft className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></SlideArrowIconLeft>:null} 
-    <SlideContainerWindow >
-        {
-            Icondata.map(({icons,i})=>(
-                  <SlideElementGroup key={i} style={{transform: `translateX(${moveby}%)`}}>
-                        {
-                          icons.map((name,i)=>(
-                              <SideLink key={i} name={name}/>
-                          ))
-                        }
-                  </SlideElementGroup>
-            )
-            )
-        }
-    </SlideContainerWindow>
-    </SlideContainer>
-    <FilterContainer>
-    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display:"block", height: "14px",width: "14px",fill: "#222222"}}><path d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
-    <span>Filters</span>
-    </FilterContainer>
-  </Container>
+  <MainContainer showShadow={showShadow}>
+    <Container>
+      <SlideContainer>
+          {moveby > -200 ? <SlideArrowIconRight onClick={moveright} ><GoChevronRight/></SlideArrowIconRight> : null}
+          {moveby !== 0 ? <SlideArrowIconLeft className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></SlideArrowIconLeft>:null} 
+      <SlideContainerWindow >
+          {
+              Icondata.map(({icons,i})=>(
+                    <SlideElementGroup key={i} style={{transform: `translateX(${moveby}%)`}}>
+                          {
+                            icons.map((name,i)=>(
+                                <SideLink key={i} name={name}/>
+                            ))
+                          }
+                    </SlideElementGroup>
+              )
+              )
+          }
+      </SlideContainerWindow>
+      </SlideContainer>
+      <FilterContainer>
+      <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display:"block", height: "14px",width: "14px",fill: "#222222"}}><path d="M5 8c1.306 0 2.418.835 2.83 2H14v2H7.829A3.001 3.001 0 1 1 5 8zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm6-8a3 3 0 1 1-2.829 4H2V4h6.17A3.001 3.001 0 0 1 11 2zm0 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"></path></svg>
+      <span>Filters</span>
+      </FilterContainer>
+    </Container>
+  </MainContainer>
 )
 
 }
+
+
+const MainContainer = styled.div`
+  padding-bottom:.5em;
+  width: 100%;
+  margin: 130px  0  0;
+  position: sticky;
+  top: 115px;
+  background-color:white;
+  box-shadow: ${({showShadow})=> showShadow? "0px 3px 3px -3px #d4d4d4":""};
+`
+
 
 const Container = styled.div`
   display:flex;
   justify-content: space-between;
   max-width: 1280px;
-  margin: 30px auto;
+  margin: auto;
 
 `
+
 
 const FilterContainer = styled.div `
   border: 1px solid var(--light-grey);
@@ -80,10 +116,14 @@ const FilterContainer = styled.div `
   font-size:12px;
   border-radius: 10px;
   font-weight: 600;
+  cursor: pointer;
 
   span{
     color: var(--text-color-dark);
   }
+  &:hover{
+  box-shadow: .1px .1px 2px #bbbbbb;
+}
 `
 
 
@@ -117,7 +157,7 @@ const SlideArrowIcon  = styled.div`
   position: absolute;
   top:50%;
   margin: -15px;
-  border: 1px solid rgb(154, 154, 154);
+  border: 1px solid var(--light-grey);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -128,6 +168,10 @@ const SlideArrowIcon  = styled.div`
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0px 0px 10px 20px rgba(255,255,255,0.9);
+
+  &:hover{
+  box-shadow: .1px .1px 2px #bbbbbb;
+}
 `
 
 const SlideArrowIconLeft = styled(SlideArrowIcon)`

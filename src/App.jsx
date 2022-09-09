@@ -39,8 +39,8 @@ const GlobalStyle = createGlobalStyle`
   font-family: var(--font-primary);
   color: var(--text-color-light);
  }
-/* 
- *{
+
+ /* *{
   border:1px solid red;
  } */
 

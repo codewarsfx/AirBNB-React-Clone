@@ -8,21 +8,32 @@ const Header = ()=>{
     return(
 
 <HeaderContainer>
+    <MainHeader>
         <HeaderLogo/>
         <SearchButton/>
         <Navigation/>
+    </MainHeader>
+    <hr style={{border: '.3px solid #DDDDDD'}} />
 </HeaderContainer>
+
 
     )
 }
 
-const HeaderContainer =styled.header`
+const MainHeader =styled.div`
     display: flex;
     align-items: center;
-    min-height:80px;
+    min-height:100px;
     justify-content: space-between;
     max-width: 1300px;
     margin:auto;
+`
+
+const HeaderContainer =styled.header`
+     width: 100%;
+    position: fixed;
+    top:0;
+    background-color: #fff;
 `
 
 
