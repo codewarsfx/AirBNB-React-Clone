@@ -38,6 +38,9 @@ const GlobalStyle = createGlobalStyle`
  body{
   font-family: var(--font-primary);
   color: var(--text-color-light);
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
  }
 
  /* *{

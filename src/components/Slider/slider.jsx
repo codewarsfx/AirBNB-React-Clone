@@ -62,7 +62,7 @@ return (
           {moveby !== 0 ? <SlideArrowIconLeft className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></SlideArrowIconLeft>:null} 
       <SlideContainerWindow >
           {
-              Icondata.map(({icons,i})=>(
+              Icondata.map(({icons},i)=>(
                     <SlideElementGroup key={i} style={{transform: `translateX(${moveby}%)`}}>
                           {
                             icons.map((name,i)=>(
