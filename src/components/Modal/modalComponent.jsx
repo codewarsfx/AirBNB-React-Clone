@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 
 const Modal = forwardRef((props,ref) => {
-    const [showModal,setShowModal] = useState(true)
+    const [showModal,setShowModal] = useState(false)
 
     const closeModal = ()=>{
         setShowModal(false)
@@ -16,7 +16,8 @@ const Modal = forwardRef((props,ref) => {
 
     useImperativeHandle(ref,()=>{
         return{
-            close :()=>closeModal()
+            close :()=>closeModal(),
+            open :()=>openModal()
         }
     })
 
@@ -27,10 +28,10 @@ const Modal = forwardRef((props,ref) => {
     if(showModal){
     return  createPortal(
      <ModalContainer>
-        <ModalOverlay onClick={closeModal}/>
-        <ModalChildren>
+        <ModalOverlay onClick={closeModal} showModal={showModal}/>
+        <div>
             {props.children}
-        </ModalChildren>
+        </div>
     </ModalContainer>,document.getElementById("modal"))
     }
 
@@ -53,12 +54,21 @@ const ModalOverlay = styled.div`
     height: 100%;
     width: 100%;
     background-color:rgba(0,0,0,.5);
+    opacity: 0;
+    animation: fadein .3s ease-in both;
+    /* animation-delay: .05s; */
     cursor: pointer;
+    @keyframes fadein{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    }
 
 `
-const ModalChildren = styled.div`
-    
-`
+
 
 
 

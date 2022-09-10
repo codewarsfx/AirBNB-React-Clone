@@ -1,5 +1,6 @@
 import { useEffect,useRef,useState } from "react"
 import styled from "styled-components"
+import Footer from "../../components/Footer/footerComponent"
 import FooterPopUp from "../../components/FooterPop/footerPopUp"
 import Header from "../../components/Header/headerComponent"
 import HomeComponent from "../../components/Homes/homeComponent"
@@ -21,6 +22,7 @@ const Home = ()=>{
             <Modal ref={modalref}>
               <FooterPopUp modal={modalref}/>
             </Modal>
+            <Footer modal={modalref} />
     </>
 
    )

@@ -21,7 +21,7 @@ export default App;
 
 const GlobalStyle = createGlobalStyle`
  :root{
-    box-sizing:inherit;
+    box-sizing:border-box;
     font-size: 16px;
     --font-primary :'Raleway', sans-serif;
     --primary-ccolor: #FF385C;
@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
  body{
   font-family: var(--font-primary);
   color: var(--text-color-light);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding: 0;
   margin: 0;
  }
