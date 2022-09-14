@@ -1,4 +1,4 @@
-import { useRef } from "react"
+
 import styled from "styled-components"
 
 const FooterPopUp = ({modal})=>{
@@ -8,7 +8,7 @@ const FooterPopUp = ({modal})=>{
     return (
         <FooterPopUpContainer>
             <div>
-            <Close onClick={()=>modal.current.close()}>
+            <Close onClick={()=>modal.current.toggle()}>
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20"></path><path d="m26 6-20 20"></path></svg>
             </Close>
             <NavigationContainer>

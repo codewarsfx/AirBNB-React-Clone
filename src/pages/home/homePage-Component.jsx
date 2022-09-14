@@ -1,5 +1,4 @@
-import { useEffect,useRef,useState } from "react"
-import styled from "styled-components"
+import { useRef} from "react"
 import Footer from "../../components/Footer/footerComponent"
 import FooterPopUp from "../../components/FooterPop/footerPopUp"
 import Header from "../../components/Header/headerComponent"
