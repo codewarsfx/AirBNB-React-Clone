@@ -29,6 +29,8 @@ const GlobalStyle = createGlobalStyle`
     --text-color-light:#717171;
     --box-shadow:#d1d0d0;
     --light-grey :#DDDDDD;
+    --box-shadow-hover: #bbbbbb;
+    --background-hover:#f3f3f3;
  }
 
  *,*::before, *::after{
