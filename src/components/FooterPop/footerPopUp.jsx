@@ -1,9 +1,12 @@
 
 import styled from "styled-components"
 import { motion} from "framer-motion"
+import { useContext } from "react";
+import { ModaLContext } from "../../Context/Modal/modalContext";
 
 
-const FooterPopUp = ({handleClose})=>{
+const FooterPopUp = ()=>{
+    const {click} = useContext(ModaLContext)
 
     const dropIn = {
         hidden: {
@@ -14,7 +17,7 @@ const FooterPopUp = ({handleClose})=>{
           y: "0",
           opacity: 1,
           transition: {
-            duration: .5,
+            duration: .3,
           },
         },
         exit: {
@@ -36,52 +39,52 @@ const FooterPopUp = ({handleClose})=>{
             exit="exit"
         >
             <div className="main">
-            <Close onClick={handleClose}>
-            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20"></path><path d="m26 6-20 20"></path></svg>
-            </Close>
-            <NavigationContainer>
-                <Navigation>
-                    <p>Support</p>
-                    <ul>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">AirCover</a></li>
-                        <li><a href="#">Safety information</a></li>
-                        <li><a href="#">Supporting people with disabilities</a></li>
-                        <li><a href="#">Cancellation options</a></li>
-                        <li><a href="#">Our COVID-19 Response</a></li>
-                        <li><a href="#">Report a neighborhood concern</a></li>
-                    </ul>
-                </Navigation>
-                <Navigation>
-                    <p>Community</p>
-                    <ul>
-                        <li><a href="#">Airbnb.org: disaster relief housing</a></li>
-                        <li><a href="#">Support Afghan refugees</a></li>
-                        <li><a href="#">Combating discrimination</a></li>
-                    </ul>
-                </Navigation>
-                <Navigation>
-                    <p>Hosting</p>
-                    <ul>
-                        <li><a href="#">Try hosting</a></li>
-                        <li><a href="#">AirCover for Hosts</a></li>
-                        <li><a href="#">Explore hosting resources</a></li>
-                        <li><a href="#">Visit our community forum</a></li>
-                        <li><a href="#">How to host responsibly</a></li>
-                    </ul>
-                </Navigation>
-                <Navigation>
-                    <p>Airbnb</p>
-                    <ul>
-                        <li><a href="#">Newsroom</a></li>
-                        <li><a href="#">Learn about new features</a></li>
-                        <li><a href="#">Letter from our founders</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Investors</a></li>
-                        <li><a href="#">Gift cards</a></li>
-                    </ul>
-                </Navigation>
-            </NavigationContainer>
+                <Close onClick={click}>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20"></path><path d="m26 6-20 20"></path></svg>
+                </Close>
+                <NavigationContainer>
+                    <Navigation>
+                        <p>Support</p>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">AirCover</a></li>
+                            <li><a href="#">Safety information</a></li>
+                            <li><a href="#">Supporting people with disabilities</a></li>
+                            <li><a href="#">Cancellation options</a></li>
+                            <li><a href="#">Our COVID-19 Response</a></li>
+                            <li><a href="#">Report a neighborhood concern</a></li>
+                        </ul>
+                    </Navigation>
+                    <Navigation>
+                        <p>Community</p>
+                        <ul>
+                            <li><a href="#">Airbnb.org: disaster relief housing</a></li>
+                            <li><a href="#">Support Afghan refugees</a></li>
+                            <li><a href="#">Combating discrimination</a></li>
+                        </ul>
+                    </Navigation>
+                    <Navigation>
+                        <p>Hosting</p>
+                        <ul>
+                            <li><a href="#">Try hosting</a></li>
+                            <li><a href="#">AirCover for Hosts</a></li>
+                            <li><a href="#">Explore hosting resources</a></li>
+                            <li><a href="#">Visit our community forum</a></li>
+                            <li><a href="#">How to host responsibly</a></li>
+                        </ul>
+                    </Navigation>
+                    <Navigation>
+                        <p>Airbnb</p>
+                        <ul>
+                            <li><a href="#">Newsroom</a></li>
+                            <li><a href="#">Learn about new features</a></li>
+                            <li><a href="#">Letter from our founders</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Investors</a></li>
+                            <li><a href="#">Gift cards</a></li>
+                        </ul>
+                    </Navigation>
+                </NavigationContainer>
             </div>
         </FooterPopUpContainer>
     )
@@ -101,7 +104,6 @@ const Close =styled.span`
     top: -10%;
     left:1%;
     cursor: pointer;
-
 :hover { 
     background-color:#f0efef;
 }

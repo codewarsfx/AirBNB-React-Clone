@@ -2,17 +2,17 @@ import { createGlobalStyle } from "styled-components";
 import 'normalize.css'
 import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
-import SignInandSignUp from "./components/SignInAndSignUp/SigInAndSignUp";
+
 
 
 function App() {
   return (
 
     <div className="App">
+
       <GlobalStyle/>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/register" element={<SignInandSignUp/>} />
       </Routes>
     </div>
   

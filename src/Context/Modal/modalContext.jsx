@@ -1,4 +1,4 @@
-import { createContext} from "react";
+import {useState, createContext} from "react";
 
 
 
@@ -13,9 +13,9 @@ const ModalProvider = ({children})=>{
     const click =()=>{ setModalOpen(modalOpen=>!modalOpen)}
  
 
-    <ModaLContext.Provider value={{modalOpen,click}}>
+  return( <ModaLContext.Provider value={{modalOpen,click}}>
         {children}
-    </ModaLContext.Provider>
+    </ModaLContext.Provider>)
 
 }
 

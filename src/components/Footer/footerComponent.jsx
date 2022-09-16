@@ -1,6 +1,10 @@
+import { useContext } from "react"
 import styled from "styled-components"
+import { ModaLContext } from "../../Context/Modal/modalContext"
+import FooterModal from "../footerModal/footerModal"
 
-const Footer =({click})=>{
+const Footer =()=>{
+   const {click} = useContext(ModaLContext)
 
 return(
     <FooterContainer >
@@ -12,7 +16,6 @@ return(
             <a href="#">Terms</a>
             <a href="#">Sitemap</a>
             <a href="#">Destinations</a>
-        
        </div>
        <div className="footer footer--right">
           <span  className="globe">
@@ -25,30 +28,30 @@ return(
           <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style={{display: "block", fill: "none", height: "16px",width: "16px", stroke: "currentcolor", strokeWidth: "4", overflow: "visible"}}><g fill="none"><path d="m4 20 11.2928932-11.29289322c.3905243-.39052429 1.0236893-.39052429 1.4142136 0l11.2928932 11.29289322"></path></g></svg>
           </span>
        </div>
+       <FooterModal/>
     </FooterContainer>
 )
 }
 
 
 const FooterContainer =  styled.div`
-background-color:white;
+    background-color:white;
     position: fixed;
     bottom:0;
     left: 0;
     width: 100%;
     display: flex;
     color: var(--text-color-dark);
-    padding:1.3em 6em;
+    padding: 1.3em 6em;
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
    a{
-    color: inherit;
-    text-decoration:none;
-    margin:0 20px;
+      color: inherit;
+      text-decoration:none;
+      margin:0 20px;
         :hover{
             text-decoration: underline;
         }
-
    }
 
    .globe{
