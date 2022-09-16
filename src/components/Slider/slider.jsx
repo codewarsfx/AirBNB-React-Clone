@@ -122,7 +122,7 @@ const FilterContainer = styled.div `
     color: var(--text-color-dark);
   }
   &:hover{
-  box-shadow: .1px .1px 2px #bbbbbb;
+  box-shadow: var(--box-shadow-hover);
 }
 `
 

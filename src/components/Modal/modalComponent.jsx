@@ -1,41 +1,25 @@
 import { forwardRef, useImperativeHandle, useState } from "react"
 import { createPortal } from "react-dom"
+import { motion } from "framer-motion"
 import styled from "styled-components"
-import { useTransition,animated } from "react-spring"
 
 
-const Modal = forwardRef((props,ref) => {
-    const [showModal,setShowModal] = useState(false)
-    const opacity = useTransition(showModal,{
-        from:{opacity:0},
-        enter:{opacity:1},
-        leave:{opacity:0},
-        reverse:showModal
-    })
+const Modal = ({children,onClick}) => {
 
-    const toggleModal = ()=>{
-        setShowModal(showModal=>!showModal)
-    }
-
-    useImperativeHandle(ref,()=>{
-        return{
-            toggle :()=>toggleModal(),
-        }
-    })
-
-    if(showModal){
-    return  createPortal(
+return createPortal(
         <ModalContainer >  
-            <ModalOverlay onClick={toggleModal}/>
+            <motion.div className="overlay"
+             onClick={onClick}
+             initial={{ opacity: 0 }}
+             animate={{ opacity: 1 }}
+             exit={{ opacity: 0 }}/>
             <div>
-                {props.children}
+                {children}
             </div>
         </ModalContainer>
-       ,document.getElementById("modal"))
-    }
-    return null
+       ,document.getElementById("modal"))  
+}
 
-})
 
 const ModalContainer = styled.div`
     position: fixed;
@@ -44,18 +28,18 @@ const ModalContainer = styled.div`
     height: 100%;
     width: 100%;
     z-index: 1000000;
-`
-
-const ModalOverlay = styled(animated.div)`
+    .overlay{
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    background-color:rgba(0,0,0,.5
-);
+    background-color:rgba(0,0,0,.5);
     cursor: pointer;
+    }
 `
+
+
 
 
 

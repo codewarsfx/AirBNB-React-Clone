@@ -2,6 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import 'normalize.css'
 import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
+import SignInandSignUp from "./components/SignInAndSignUp/SigInAndSignUp";
 
 
 function App() {
@@ -11,8 +12,10 @@ function App() {
       <GlobalStyle/>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/register" element={<SignInandSignUp/>} />
       </Routes>
     </div>
+  
   );
 }
 
@@ -29,8 +32,8 @@ const GlobalStyle = createGlobalStyle`
     --text-color-light:#717171;
     --box-shadow:#d1d0d0;
     --light-grey :#DDDDDD;
-    --box-shadow-hover: #bbbbbb;
-    --background-hover:#f3f3f3;
+    --box-shadow-hover: 0px 5px 5px -3px  #bbbbbb;
+    --background-hover:#e8e8e8;
  }
 
  *,*::before, *::after{

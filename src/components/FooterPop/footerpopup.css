@@ -1,0 +1,13 @@
+.foot{
+    position: absolute;
+    top: 55vh;
+    left: 0;
+    border-radius: 15px;
+    min-height: 46vh;
+    width:100%;
+    background-color:white;
+}
+
+.main{
+    position: relative;
+}

@@ -1,14 +1,43 @@
 
 import styled from "styled-components"
+import { motion} from "framer-motion"
+import "./footerpopup.css"
 
-const FooterPopUp = ({modal})=>{
+const FooterPopUp = ({handleClose})=>{
+
+    const dropIn = {
+        hidden: {
+          y: "50vh",
+          opacity: 0,
+        },
+        visible: {
+          y: "0",
+          opacity: 1,
+          transition: {
+            duration: .5,
+          },
+        },
+        exit: {
+          y: "50vh",
+          opacity: 0,
+          transition: {
+            duration: .4,
+          },
+        },
+      };
 
 
 
     return (
-        <FooterPopUpContainer>
-            <div>
-            <Close onClick={()=>modal.current.toggle()}>
+        <motion.div
+            className="foot"
+            variants={dropIn}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
+            <div className="main">
+            <Close onClick={handleClose}>
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20"></path><path d="m26 6-20 20"></path></svg>
             </Close>
             <NavigationContainer>
@@ -55,7 +84,7 @@ const FooterPopUp = ({modal})=>{
                 </Navigation>
             </NavigationContainer>
             </div>
-        </FooterPopUpContainer>
+        </motion.div>
     )
 
 
@@ -91,19 +120,19 @@ svg{
 `
 
 
-const FooterPopUpContainer = styled.footer`
-div {
-    position: relative;
-}
-     position: absolute;
-     top: 55vh;
-     left: 0;
-     border-radius: 15px;
-     min-height: 46vh;
-     width:100%;
-     background-color:white;
+// const FooterPopUpContainer = styled.footer`
+// div {
+//     position: relative;
+// }
+//      position: absolute;
+//      top: 55vh;
+//      left: 0;
+//      border-radius: 15px;
+//      min-height: 46vh;
+//      width:100%;
+//      background-color:white;
 
-`
+// `
 
 
 const NavigationContainer = styled.div`

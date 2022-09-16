@@ -22,10 +22,10 @@ const Navigation =()=>{
            <div className="navbutton-dropdown-top">
              <ul className="navbutton-dropdown-list">
                 <li>
-                  <a href="#" className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</a>
+                  <Link to="/register" className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</Link>
                 </li>
                 <li>
-                  <a href="#" className="navbutton-dropdown-link">Log in</a>
+                  <Link to="/register" className="navbutton-dropdown-link">Log in</Link>
                 </li>
              </ul>
            </div>
@@ -82,10 +82,10 @@ justify-content: space-around;
 align-items: center;
 width: 80px;
 border-radius: 20px;
-box-shadow : ${({showDropdown})=> showDropdown && "0px 3px 5px -3px  var(--box-shadow-hover)" };
+box-shadow : ${({showDropdown})=> showDropdown && " var(--box-shadow-hover)" };
 
 :hover{
-  box-shadow: 0px 3px 5px -3px  var(--box-shadow-hover);
+  box-shadow:var(--box-shadow-hover);
 }
 
 
