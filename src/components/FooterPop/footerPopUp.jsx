@@ -1,7 +1,7 @@
 
 import styled from "styled-components"
 import { motion} from "framer-motion"
-import "./footerpopup.css"
+
 
 const FooterPopUp = ({handleClose})=>{
 
@@ -27,9 +27,8 @@ const FooterPopUp = ({handleClose})=>{
       };
 
 
-
     return (
-        <motion.div
+        <FooterPopUpContainer
             className="foot"
             variants={dropIn}
             initial="hidden"
@@ -84,7 +83,7 @@ const FooterPopUp = ({handleClose})=>{
                 </Navigation>
             </NavigationContainer>
             </div>
-        </motion.div>
+        </FooterPopUpContainer>
     )
 
 
@@ -120,19 +119,19 @@ svg{
 `
 
 
-// const FooterPopUpContainer = styled.footer`
-// div {
-//     position: relative;
-// }
-//      position: absolute;
-//      top: 55vh;
-//      left: 0;
-//      border-radius: 15px;
-//      min-height: 46vh;
-//      width:100%;
-//      background-color:white;
+const FooterPopUpContainer = styled(motion.footer)`
+div {
+    position: relative;
+}
+     position: absolute;
+     top: 55vh;
+     left: 0;
+     border-radius: 15px;
+     min-height: 46vh;
+     width:100%;
+     background-color:white;
 
-// `
+`
 
 
 const NavigationContainer = styled.div`

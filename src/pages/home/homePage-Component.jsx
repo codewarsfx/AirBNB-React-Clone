@@ -12,29 +12,13 @@ import Slider from "../../components/Slider/slider"
 
 const Home = ()=>{
 
-  //  const modalref = useRef()
-
-   const [modalOpen, setModalOpen] = useState(false);
-
-
-   const click =()=>{ setModalOpen(modalOpen=>!modalOpen)}
 
    return (
     <>  
            <Header/>
             <Slider/>
             <HomeComponent/>
-            <AnimatePresence
-    // Disable any initial animations on children that
-    // are present when the component is first rendered
-    initial={false}
-    // Only render one component at a time.
-    // The exiting component will finish its exit
-    // animation before entering component is rendered
-    exitBeforeEnter={true}
-    // Fires when all exiting nodes have completed animating out
-    onExitComplete={() => null}
->
+
     { modalOpen &&(<Modal onClick={click}>
                     <FooterPopUp handleClose={click} />
                   </Modal>)
