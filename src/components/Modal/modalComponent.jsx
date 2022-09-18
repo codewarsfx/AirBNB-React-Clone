@@ -7,6 +7,7 @@ import { ModaLContext } from "../../Context/Modal/modalContext"
 
 const Modal = ({children}) => {
 
+    
     const {click} = useContext(ModaLContext)
 
 return createPortal(

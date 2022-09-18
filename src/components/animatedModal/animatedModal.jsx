@@ -4,11 +4,10 @@ import { useContext } from "react"
 
 
 import { ModaLContext } from "../../Context/Modal/modalContext"
-import FooterPopUp from "../FooterPop/footerPopUp"
 import Modal from "../Modal/modalComponent"
 
 
-const FooterModal = ()=> {
+const AnimatedModal = ({component,type})=> {
 
     const {modalOpen} = useContext(ModaLContext)
 
@@ -17,14 +16,14 @@ const FooterModal = ()=> {
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}>
-                                    { modalOpen && ( <Modal>
-                                                        < FooterPopUp/>
-                                                    </Modal>)
-                                    }
-    </AnimatePresence>
+                                 {    modalOpen && (<Modal>
+                                                        {component}
+                                                    </Modal>)}
+                                     
+         </AnimatePresence>
     )
 
 }
 
 
-export default FooterModal
+export default AnimatedModal

@@ -1,11 +1,17 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import "./nav.css"
-import { useState } from "react"
+import { useContext, useState } from "react"
+
+import AnimatedModal from "../animatedModal/animatedModal"
+import CenterContainer from "../CenterPop/centerPopComponent"
+import { ModaLContext } from "../../Context/Modal/modalContext"
 
 
 const Navigation =()=>{
    const [showDropdown, setShowDropdown] = useState(false)
+
+   const {click} = useContext(ModaLContext)
     return(
       <Container>
         <NavLink to="/">
@@ -22,27 +28,30 @@ const Navigation =()=>{
            <div className="navbutton-dropdown-top">
              <ul className="navbutton-dropdown-list">
                 <li>
-                  <Link to="/register" className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</Link>
+                  <span onClick={click} className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</span>
                 </li>
                 <li>
-                  <Link to="/register" className="navbutton-dropdown-link">Log in</Link>
+                  <span  className="navbutton-dropdown-link">Log in</span>
                 </li>
              </ul>
            </div>
            <div className="navbutton-dropdown-bottom">
            <ul className="navbutton-dropdown-list">
                  <li>
-                  <a href="#" className="navbutton-dropdown-link">Host your home</a>
+                  <span className="navbutton-dropdown-link">Host your home</span>
                 </li>
                 <li>
-                  <a href="#" className="navbutton-dropdown-link">Host an experience</a>
+                  <span className="navbutton-dropdown-link">Host an experience</span>
                 </li>
                 <li>
-                  <a href="#" className="navbutton-dropdown-link">Help</a>
+                  <span  className="navbutton-dropdown-link">Help</span>
                 </li>
             </ul>
            </div>
-        </div>}
+           <AnimatedModal component={<CenterContainer/>}/>
+        </div>
+        }
+     
       </Container>
     )
 }

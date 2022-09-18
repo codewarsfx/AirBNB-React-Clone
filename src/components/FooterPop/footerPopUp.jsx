@@ -92,33 +92,7 @@ const FooterPopUp = ()=>{
 
 }
 
-const Close =styled.span`
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    top: -10%;
-    left:1%;
-    cursor: pointer;
-:hover { 
-    background-color:#f0efef;
-}
 
-svg{
-     display: block;
-     fill: none;
-      height: 14px; 
-      width: 14px; 
-      stroke:var(--text-color-dark); 
-      stroke-width: 3; 
-      overflow: visible;
-}
-
-`
 
 
 const FooterPopUpContainer = styled(motion.footer)`
@@ -134,6 +108,7 @@ div {
      background-color:white;
 
 `
+
 
 
 const NavigationContainer = styled.div`
@@ -171,6 +146,36 @@ const Navigation =  styled.nav`
 
 
 `
+
+
+const Close =styled.span`
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    top: -10%;
+    left:1%;
+    cursor: pointer;
+:hover { 
+    background-color:#f0efef;
+}
+
+svg{
+     display: block;
+     fill: none;
+      height: 14px; 
+      width: 14px; 
+      stroke:var(--text-color-dark); 
+      stroke-width: 3; 
+      overflow: visible;
+}
+
+`
+
 
 
 export default FooterPopUp
