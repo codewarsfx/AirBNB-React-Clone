@@ -7,16 +7,13 @@ import "./nav.css"
 
 import AnimatedModal from "../animatedModal/animatedModal"
 import CenterContainer from "../CenterPop/centerPopComponent"
+import useModal from "../../Hooks/useModal"
 
 
 
 const Navigation =()=>{
    const [showDropdown, setShowDropdown] = useState(false)
-   const [showModal,setShowModal] = useState(false)
-
-   const click = () => {
-      setShowModal(showModal => !showModal)
-   }
+    const {showModal,click} = useModal()
 
     return(
       <Container>

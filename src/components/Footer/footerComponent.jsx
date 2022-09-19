@@ -1,20 +1,15 @@
-import { useState } from "react"
-import { useContext } from "react"
 import styled from "styled-components"
+import useModal from "../../Hooks/useModal"
 
 
 
-import { ModaLContext } from "../../Context/Modal/modalContext"
 import AnimatedModal from "../animatedModal/animatedModal"
 import FooterPopUp from "../FooterPop/footerPopUp"
 
 const Footer =()=>{
-   const [showModal,setShowModal] = useState(false)
+    const {showModal,click} = useModal()
 
-   const click = () => {
-      setShowModal(showModal => !showModal)
-   }
-   
+
 return(
     <FooterContainer >
        <div className="footer">
