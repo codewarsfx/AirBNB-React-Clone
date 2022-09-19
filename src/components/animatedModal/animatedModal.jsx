@@ -6,7 +6,6 @@ import Modal from "../Modal/modalComponent"
 const AnimatedModal = ({component,showModal,click})=> {
 
 
-
     return(
         <AnimatePresence
         initial={false}
@@ -14,8 +13,7 @@ const AnimatedModal = ({component,showModal,click})=> {
         onExitComplete={() => null}>
                                  { showModal && (<Modal click={click}>
                                                         {component}
-                                                    </Modal>)}
-                                     
+                                                 </Modal>)}                    
          </AnimatePresence>
     )
 

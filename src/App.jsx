@@ -8,8 +8,7 @@ import { Routes,Route } from "react-router-dom";
 function App() {
   return (
 
-    <div className="App">
-
+     <div className="App">
       <GlobalStyle/>
       <Routes>
         <Route path="/" element={<Home/>} />
@@ -43,12 +42,11 @@ const GlobalStyle = createGlobalStyle`
  body{
   font-family: var(--font-primary);
   color: var(--text-color-light);
-  /* overflow-x: hidden; */
   padding: 0;
   margin: 0;
  }
-/* 
- *{
+
+ /* *{
   border:1px solid red;
  } */
 

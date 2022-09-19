@@ -1,6 +1,7 @@
 
 import styled from "styled-components"
 import { motion} from "framer-motion"
+import CloseIcon from "../CloseIcon/closeIcon";
 
 const FooterPopUp = ({click})=>{
 
@@ -36,9 +37,7 @@ const FooterPopUp = ({click})=>{
             exit="exit"
         >
             <div className="main">
-                <Close onClick={click}>
-                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false"><path d="m6 6 20 20"></path><path d="m26 6-20 20"></path></svg>
-                </Close>
+                <CloseIcon click={click}/>
                 <NavigationContainer>
                     <Navigation>
                         <p>Support</p>
@@ -145,33 +144,7 @@ const Navigation =  styled.nav`
 `
 
 
-const Close =styled.span`
-    display: block;
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:50%;
-    top: -10%;
-    left:1%;
-    cursor: pointer;
-:hover { 
-    background-color:#f0efef;
-}
 
-svg{
-     display: block;
-     fill: none;
-      height: 14px; 
-      width: 14px; 
-      stroke:var(--text-color-dark); 
-      stroke-width: 3; 
-      overflow: visible;
-}
-
-`
 
 
 

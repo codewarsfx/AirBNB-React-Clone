@@ -1,0 +1,82 @@
+.form-section-top{
+    position: relative;
+    border-bottom: 1px solid var(--light-grey);
+    display: flex;
+    align-items: center;
+}
+
+/* .icon{
+    position: absolute;
+    top: 0%;
+
+} */
+
+
+.form-section{
+    color: var( --text-color-dark);
+    padding:.5em 1.8em;
+    font-weight: 600;
+}
+
+.form-title{
+   text-align: center;
+   width: 100%;
+
+}
+
+.form-section-title{
+    font-size: 25px;
+    margin: 1em 0;
+}
+
+.registerion-form-input{
+    width: 100%;
+    padding: 1.1em .8em;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    background-color: white;
+    margin-top: 20px;
+}
+.registerion-form-input:focus{
+    outline-color: black;
+}
+
+.registeration-form{
+    border-bottom: 1px solid var(--light-grey);
+    position: relative;
+}
+
+.registeration-form::after{
+    content: "or";
+    background-color: white;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-color-dark);
+    position: absolute;
+    left: 50%;
+    bottom: -8%;
+    margin-left: -25px;
+}
+
+.registerion-form-input::placeholder{
+    font-size: 15px;
+    font-family: inherit;
+}
+
+.registerion-form-input--submit{
+    background:linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    border: none;
+    padding:  .8em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.submit-button:first-of-type{
+    margin-top: 40px;
+}

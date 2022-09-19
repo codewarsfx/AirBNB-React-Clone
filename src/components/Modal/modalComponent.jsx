@@ -11,7 +11,6 @@ const Modal = ({children,click}) => {
 useEffect(()=>{
     document.querySelector('body').classList.add('remove-scroll');
 
-
     return ()=>{
         document.querySelector('body').classList.remove('remove-scroll');
     }

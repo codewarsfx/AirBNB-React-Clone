@@ -1,6 +1,7 @@
 
 import styled from "styled-components"
 import {motion} from "framer-motion"
+import SignUpSignIn from "../signupandLogin/signup";
 
 
 const CenterContainer = ()=>{
@@ -34,6 +35,7 @@ const CenterContainer = ()=>{
           animate="visible"
           exit="exit"
         >
+          <SignUpSignIn/>
         </Container>
     )
 }
