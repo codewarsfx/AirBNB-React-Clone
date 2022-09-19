@@ -1,14 +1,21 @@
 import { createPortal } from "react-dom"
 import { motion } from "framer-motion"
 import styled from "styled-components"
-import { useContext } from "react"
-import { ModaLContext } from "../../Context/Modal/modalContext"
+import { useEffect } from "react"
 
 
-const Modal = ({children}) => {
 
-    
-    const {click} = useContext(ModaLContext)
+const Modal = ({children,click}) => {
+
+
+useEffect(()=>{
+    document.querySelector('body').classList.add('remove-scroll');
+
+
+    return ()=>{
+        document.querySelector('body').classList.remove('remove-scroll');
+    }
+},[])
 
 return createPortal(
         <ModalContainer >  

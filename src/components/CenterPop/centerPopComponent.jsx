@@ -5,9 +5,8 @@ import {motion} from "framer-motion"
 import { useContext } from "react"
 import { ModaLContext } from "../../Context/Modal/modalContext"
 
-const CenterContainer = ()=>{
+const CenterContainer = ({click})=>{
 
-    const {click} = useContext(ModaLContext)
 
     const dropIn = {
         hidden: {
@@ -32,35 +31,28 @@ const CenterContainer = ()=>{
 
 
     return (
-     <Container onClick={click}>
-        <motion.div className="content"
+        <Container className="content"
           variants={dropIn}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
-        </motion.div>
-     </Container>
+        </Container>
     )
 }
 
 
-const Container = styled.div `
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    .content {
+const Container = styled(motion.div) `
         min-height: 81vh;
         width:80%;
         max-width: 580px;
         background-color: white;
         border-radius: 15px;
-     }
+        position:absolute;
+        top: 10%;
+        left: 33%;
+     
+
 `
 
 export default CenterContainer

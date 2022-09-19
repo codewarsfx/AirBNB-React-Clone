@@ -1,12 +1,9 @@
 
 import styled from "styled-components"
 import { motion} from "framer-motion"
-import { useContext } from "react";
-import { ModaLContext } from "../../Context/Modal/modalContext";
 
+const FooterPopUp = ({click})=>{
 
-const FooterPopUp = ()=>{
-    const {click} = useContext(ModaLContext)
 
     const dropIn = {
         hidden: {

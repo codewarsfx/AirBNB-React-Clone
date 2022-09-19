@@ -1,17 +1,23 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
+import { useState } from "react"
+
+
 import "./nav.css"
-import { useContext, useState } from "react"
 
 import AnimatedModal from "../animatedModal/animatedModal"
 import CenterContainer from "../CenterPop/centerPopComponent"
-import { ModaLContext } from "../../Context/Modal/modalContext"
+
 
 
 const Navigation =()=>{
    const [showDropdown, setShowDropdown] = useState(false)
+   const [showModal,setShowModal] = useState(false)
 
-   const {click} = useContext(ModaLContext)
+   const click = () => {
+      setShowModal(showModal => !showModal)
+   }
+
     return(
       <Container>
         <NavLink to="/">
@@ -48,7 +54,7 @@ const Navigation =()=>{
                 </li>
             </ul>
            </div>
-           <AnimatedModal component={<CenterContainer/>}/>
+           <AnimatedModal showModal={showModal} click={click} component={<CenterContainer/>}/>
         </div>
         }
      
