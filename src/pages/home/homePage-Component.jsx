@@ -1,5 +1,6 @@
 
 import Footer from "../../components/Footer/footerComponent"
+import FooterSmallComponent from "../../components/FooterSmall/footerSmallComponent"
 import Header from "../../components/Header/headerComponent"
 import HomeComponent from "../../components/Homes/homeComponent"
 import SignUpSignIn from "../../components/signupandLogin/signup"
@@ -15,7 +16,7 @@ const Home = ()=>{
             <Slider/>
             <HomeComponent/>
             <Footer/>
-            {/* <SignUpSignIn/> */}
+            <FooterSmallComponent/>
     </>
    )
    }

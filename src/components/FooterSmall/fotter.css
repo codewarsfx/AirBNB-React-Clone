@@ -1,0 +1,45 @@
+.icon{
+    display: block;
+    height: 24px;
+    width:24px;
+    fill: none;
+    stroke:#aaa;
+    overflow: visible;
+    stroke-width: 2.66667;
+    margin-bottom: 5px;
+
+}
+
+
+
+.icon--last{
+    stroke:none;
+    fill:#aaa;
+}
+
+.footer-actions{
+    width: 55%;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+
+.footer-actions-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--text-color-light);
+    cursor: pointer;
+}
+
+.footer-actions-item.active .icon{
+    stroke:var( --primary-ccolor);
+    font-weight: 600;
+    stroke-width:4;
+}
+
+.footer-actions-item.active{
+    color: var(--text-color-dark);
+  }

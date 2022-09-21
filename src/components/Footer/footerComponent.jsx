@@ -39,6 +39,7 @@ return(
 
 
 const FooterContainer =  styled.div`
+  
     background-color:white;
     position: fixed;
     bottom:0;
@@ -49,6 +50,7 @@ const FooterContainer =  styled.div`
     padding: 1.2em 5em;
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
+    display:none;
    a{
       color: inherit;
       text-decoration:none;
