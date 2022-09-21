@@ -46,7 +46,7 @@ const FooterContainer =  styled.div`
     width: 100%;
     display: flex;
     color: var(--text-color-dark);
-    padding: 1.3em 6em;
+    padding: 1.2em 5em;
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
    a{

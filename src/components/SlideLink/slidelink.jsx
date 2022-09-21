@@ -16,9 +16,23 @@ const SlideElement = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   padding: .3em;
   transition: transform .4s ease-out;
+  margin-left: 30px;
+&:not(:first-child){
+   margin-left: 35px;
+}
+
+&:nth-child(n+5){
+   margin-left: 40px;
+}
+
+
+
+
+  
 
   span{  
     font-size: 12px;

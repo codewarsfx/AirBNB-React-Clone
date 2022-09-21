@@ -7,13 +7,13 @@ import styled from "styled-components"
 
 const Icondata =[
   {
-  "icons": ["Design","Surfing","Bed and breakfast","Artic","Beach","Caves","OMG!","Tropical","Castles","Tents","Cabins","Lakes"]
+  "icons": ["Design","Surfing","Beds","Artic","Beach","Caves","OMG!","Tropical","Castles","Tents","Cabins","Lakes"]
 
   },
   {
-    "icons": ["Design","Beach","Caves","OMG!","Surfing","Bed and breakfast","Artic","Castles","Tents","Cabins","Tropical","Castles"]
+    "icons": ["Design","Beach","Caves","OMG!","Surfing","Beds","Artic","Castles","Tents","Cabins","Tropical","Castles"]
     },
-   { "icons" :["Design","Surfing","Bed and breakfast","Artic","Beach","Caves","OMG!","Tropical","Castles","Tents","Cabins","Lakes"]}
+   { "icons" :["Design","Surfing","Beds","Artic","Beach","Caves","OMG!","Tropical","Castles","Tents","Cabins","Lakes"]}
 ]
 
 
@@ -89,11 +89,14 @@ return (
 const MainContainer = styled.div`
   padding-bottom:.5em;
   width: 100%;
-  margin: 130px  0  0;
-  position: sticky;
-  top: 115px;
+  /* margin: 130px  0  0; */
+  /* position: sticky; */
+  position: fixed;
+  top: 85px;
+  /* top: 117px; */
   background-color:white;
-  box-shadow: ${({showShadow})=> showShadow? "0px 3px 3px -3px #d4d4d4":""};
+  box-shadow:0px 3px 3px -3px #d4d4d4;
+  /* box-shadow: ${({showShadow})=> showShadow? "0px 3px 3px -3px #d4d4d4":""}; */
 `
 
 
@@ -101,7 +104,8 @@ const Container = styled.div`
   display:flex;
   justify-content: space-between;
   max-width: 1280px;
-  margin: auto;
+  width: 100%;
+
 
 `
 
@@ -117,6 +121,7 @@ const FilterContainer = styled.div `
   border-radius: 10px;
   font-weight: 600;
   cursor: pointer;
+  display:none;
 
   span{
     color: var(--text-color-dark);
@@ -129,7 +134,7 @@ const FilterContainer = styled.div `
 
 const SlideContainer = styled.div`
   position: relative;
-  width:90%;
+  width:100%;
 `
 const SlideContainerWindow = styled.div`
     display: flex;
@@ -144,14 +149,22 @@ const SlideContainerWindow = styled.div`
 `
 
 const SlideElementGroup = styled.div`
-   min-width: 100%;
+   /* min-width: 100%; */
    display:flex;
    transition: transform .7s ease-out;
    justify-content:space-between;
+
+   ${SideLink} {
+    flex: 300px 1;
+    background-color:green;
+   }
+   
 `
 
 
+
 const SlideArrowIcon  = styled.div`
+
   width: 26px;
   height: 26px;
   position: absolute;
@@ -168,9 +181,11 @@ const SlideArrowIcon  = styled.div`
   cursor: pointer;
   z-index: 1000;
   box-shadow: 0px 0px 10px 20px rgba(255,255,255,0.9);
+  display: none;
 
   &:hover{
   box-shadow: .1px .1px 2px #bbbbbb;
+  
 }
 `
 

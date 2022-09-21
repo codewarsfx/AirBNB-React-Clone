@@ -34,10 +34,10 @@ const Container= styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 2px 1px 5px var(--box-shadow);
-    border: 1px solid var(--light-grey);
+    box-shadow: 2px 1px 10px #e4e4e4;
     border-radius:30px;
-    min-width: 350px;
+    width: 100%;
+    cursor: pointer;
 `
 
 

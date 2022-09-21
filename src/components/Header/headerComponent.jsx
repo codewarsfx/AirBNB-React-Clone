@@ -13,7 +13,7 @@ const Header = ()=>{
         <SearchButton/>
         <Navigation/>
     </MainHeader>
-    <hr style={{border: '.3px solid #DDDDDD'}} />
+    <hr className="header-rule"/>
 </HeaderContainer>
 
 
@@ -23,18 +23,23 @@ const Header = ()=>{
 const MainHeader =styled.div`
     display: flex;
     align-items: center;
-    min-height:100px;
-    justify-content: space-between;
+    width: 90%;
     max-width: 1300px;
-    margin:auto;
+    margin:20px auto 10px;
+
+    /* min-height: 100px; */
 `
 
-const HeaderContainer =styled.header`
-     width: 100%;
+const HeaderContainer = styled.header`
+    width: 100%;
     position: fixed;
     top:0;
     background-color: #fff;
     z-index: 1;
+    .header-rule{
+        border: .3px solid #DDDDDD;
+        display : none;
+    }
 `
 
 
