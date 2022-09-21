@@ -11,9 +11,9 @@ return(
 }
 
 const Close =styled.span`
-    display: block;
     width: 30px;
     height: 30px;
+    margin:5px 0 0 10px;
     display: flex;
     justify-content:center;
     align-items:center;

@@ -36,8 +36,8 @@ const FooterPopUp = ({toggleModal})=>{
             animate="visible"
             exit="exit"
         >
-            <div className="main">
-                <CloseIcon click={toggleModal}/>
+            <div>
+                <CloseIcon click={toggleModal}/>  
                 <NavigationContainer>
                     <Navigation>
                         <p>Support</p>
@@ -81,7 +81,7 @@ const FooterPopUp = ({toggleModal})=>{
                         </ul>
                     </Navigation>
                 </NavigationContainer>
-            </div>
+            </div> 
         </FooterPopUpContainer>
     )
 
@@ -92,9 +92,9 @@ const FooterPopUp = ({toggleModal})=>{
 
 
 const FooterPopUpContainer = styled(motion.footer)`
-div {
-    position: relative;
-}
+    div {
+        position: relative;
+    }
      position: absolute;
      top: 55vh;
      left: 0;
@@ -106,10 +106,9 @@ div {
 `
 
 
-
 const NavigationContainer = styled.div`
     max-width: 1300px;
-    margin:50px 0;
+    margin:0px 0;
     display: flex;
     justify-content: space-evenly;
 `
