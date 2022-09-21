@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { motion} from "framer-motion"
 import CloseIcon from "../CloseIcon/closeIcon";
 
-const FooterPopUp = ({click})=>{
+const FooterPopUp = ({toggleModal})=>{
 
 
     const dropIn = {
@@ -37,7 +37,7 @@ const FooterPopUp = ({click})=>{
             exit="exit"
         >
             <div className="main">
-                <CloseIcon click={click}/>
+                <CloseIcon click={toggleModal}/>
                 <NavigationContainer>
                     <Navigation>
                         <p>Support</p>

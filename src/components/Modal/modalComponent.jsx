@@ -5,7 +5,7 @@ import { useEffect } from "react"
 
 
 
-const Modal = ({children,click}) => {
+const Modal = ({children,toggleModal}) => {
 
 
 useEffect(()=>{
@@ -19,7 +19,7 @@ useEffect(()=>{
 return createPortal(
         <ModalContainer >  
             <ModalOverlay
-             onClick={click}
+             onClick={toggleModal}
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
              exit={{ opacity: 0 }}/>

@@ -1,21 +1,21 @@
 import styled from "styled-components"
 
 
-import useModal from "../../Hooks/useModal"
-import AnimatedModal from "../animatedModal/animatedModal"
-import CenterContainer from "../CenterPop/centerPopComponent"
 
 
-const NavDropdown = () => {
 
-const {showModal,click} = useModal()
+const NavDropdown = ({toggleModal,toggleDropDownOnClick}) => {
 
+    const showRegisterModal = ()=>{
+        toggleModal()
+        toggleDropDownOnClick()
+    }
 return (
     <DropdownContainer>
         <DropdownTop>
         <DropdownList>
             <li>
-            <span onClick={click} className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</span>
+            <span onClick={showRegisterModal} className="navbutton-dropdown-link navbutton-dropdown-link--bold">Sign Up</span>
             </li>
             <li>
             <span  className="navbutton-dropdown-link">Log in</span>
@@ -34,8 +34,7 @@ return (
             <span  className="navbutton-dropdown-link">Help</span>
             </li>
         </DropdownList>
-        </div>
-        <AnimatedModal showModal={showModal} click={click} component={<CenterContainer/>}/>
+        </div> 
     </DropdownContainer>
 )
 }

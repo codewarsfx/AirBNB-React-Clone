@@ -1,10 +1,10 @@
 
 import styled from "styled-components"
 import {motion} from "framer-motion"
-import SignUpSignIn from "../signupandLogin/signup";
 
 
-const CenterContainer = ()=>{
+
+const CenterContainer = ({children})=>{
 
     const dropIn = {
         hidden: {
@@ -35,7 +35,7 @@ const CenterContainer = ()=>{
           animate="visible"
           exit="exit"
         >
-          <SignUpSignIn/>
+          {children}
         </Container>
     )
 }

@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion"
 import Modal from "../Modal/modalComponent"
 
 
-const AnimatedModal = ({component,showModal,click})=> {
+const AnimatedModal = ({component,isModalopen,toggleModal})=> {
 
 
     return(
@@ -11,7 +11,7 @@ const AnimatedModal = ({component,showModal,click})=> {
         initial={false}
         exitBeforeEnter={true}
         onExitComplete={() => null}>
-                                 { showModal && (<Modal click={click}>
+                                 { isModalopen && (<Modal toggleModal={toggleModal}>
                                                         {component}
                                                  </Modal>)}                    
          </AnimatePresence>
