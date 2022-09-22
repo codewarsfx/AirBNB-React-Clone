@@ -89,14 +89,20 @@ return (
 const MainContainer = styled.div`
   padding-bottom:.5em;
   width: 100%;
-  /* margin: 130px  0  0; */
-  /* position: sticky; */
   position: fixed;
   top: 84px;
-  /* top: 117px; */
   background-color:white;
-  box-shadow:0px 3px 3px -3px #d4d4d4;
-  /* box-shadow: ${({showShadow})=> showShadow? "0px 3px 3px -3px #d4d4d4":""}; */
+
+  @media (max-width:750px) {
+    box-shadow:0px 3px 3px -3px #d4d4d4;
+  }
+
+  @media (min-width:750px) {
+     margin: 130px  0  0; 
+     position: sticky; 
+     top: 117px;
+     box-shadow: ${({showShadow})=> showShadow ? "0px 3px 3px -3px #d4d4d4":""}; 
+  }
 `
 
 
@@ -106,7 +112,11 @@ const Container = styled.div`
   max-width: 1280px;
   width: 100%;
 
-
+  @media (min-width:750px) {
+    width:90%;
+    margin:auto;
+    align-items: center;
+  }
 `
 
 
@@ -114,7 +124,6 @@ const FilterContainer = styled.div `
   border: 1px solid var(--light-grey);
   width: 88px;
   height: 46px;
-  display: flex;
   align-items: center;
   justify-content: space-evenly;
   font-size:12px;
@@ -129,12 +138,28 @@ const FilterContainer = styled.div `
   &:hover{
   box-shadow: var(--box-shadow-hover);
 }
+
+@media (min-width:750px) {
+  display: flex;
+  }
 `
 
 
 const SlideContainer = styled.div`
   position: relative;
   width:100%;
+
+  @media (min-width:750px) {
+    width:83%;
+  }
+
+  @media (min-width:950px) {
+    width:87%;
+  }
+
+  @media (min-width:1200px) {
+    width:90%;
+  }
 `
 const SlideContainerWindow = styled.div`
     display: flex;
@@ -146,19 +171,19 @@ const SlideContainerWindow = styled.div`
     display: none;
     width: 0px;
   }
+
+
 `
 
 const SlideElementGroup = styled.div`
-  
    display:flex;
    transition: transform .7s ease-out;
    justify-content:space-between;
 
-   ${SideLink} {
-    flex: 300px 1;
-    background-color:green;
-   }
 
+   @media (min-width:950px) {
+    min-width:100%;
+  }
 
    
 `
@@ -181,7 +206,7 @@ const SlideArrowIcon  = styled.div`
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0px 0px 10px 20px rgba(255,255,255,0.9);
+  /* box-shadow: 0px 0 px 10px 20px rgba(255,255,255,0.9); */
   display: none;
 
   &:hover{

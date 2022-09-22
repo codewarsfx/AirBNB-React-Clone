@@ -26,8 +26,10 @@ const MainHeader =styled.div`
     width: 90%;
     max-width: 1300px;
     margin:20px auto 10px;
+    @media (min-width:750px){
+    min-height: 100px;
+    }
 
-    /* min-height: 100px; */
 `
 
 const HeaderContainer = styled.header`

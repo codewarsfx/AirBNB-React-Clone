@@ -34,7 +34,17 @@ const SlideElement = styled(Link)`
   }
 
   @media (min-width: 750px){
-    margin:0;
+    margin:0 2.8vw ;
+    :first-child{
+     margin-left: 0vw;
+  }
+  }
+
+  @media (min-width: 850px){
+    margin:0 1.5vw ;
+    :first-child{
+     margin-left: 0vw;
+  }
   }
 
 
