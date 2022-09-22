@@ -92,7 +92,7 @@ const MainContainer = styled.div`
   /* margin: 130px  0  0; */
   /* position: sticky; */
   position: fixed;
-  top: 85px;
+  top: 84px;
   /* top: 117px; */
   background-color:white;
   box-shadow:0px 3px 3px -3px #d4d4d4;
@@ -149,7 +149,7 @@ const SlideContainerWindow = styled.div`
 `
 
 const SlideElementGroup = styled.div`
-   /* min-width: 100%; */
+  
    display:flex;
    transition: transform .7s ease-out;
    justify-content:space-between;
@@ -158,6 +158,8 @@ const SlideElementGroup = styled.div`
     flex: 300px 1;
     background-color:green;
    }
+
+
    
 `
 
@@ -172,7 +174,6 @@ const SlideArrowIcon  = styled.div`
   margin: -15px;
   border: 1px solid var(--light-grey);
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
   background-color:white;
@@ -185,8 +186,12 @@ const SlideArrowIcon  = styled.div`
 
   &:hover{
   box-shadow: .1px .1px 2px #bbbbbb;
-  
+
 }
+
+@media (min-width: 750px) {
+    display: flex;
+   }
 `
 
 const SlideArrowIconLeft = styled(SlideArrowIcon)`

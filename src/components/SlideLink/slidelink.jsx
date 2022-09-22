@@ -20,26 +20,33 @@ const SlideElement = styled(Link)`
   text-decoration: none;
   padding: .3em;
   transition: transform .4s ease-out;
-  margin-left: 30px;
-&:not(:first-child){
-   margin-left: 35px;
-}
+  margin:0 4.3vw;
+  :first-child{
+   margin-left: 6vw;
+  }
 
-&:nth-child(n+5){
-   margin-left: 40px;
-}
-
-
-
-
+  @media (max-width: 380px){
+    margin:0 3.8vw;
+  }
   
+  @media (min-width: 500px){
+    margin:0 2vw;
+  }
 
-  span{  
+  @media (min-width: 750px){
+    margin:0;
+  }
+
+
+span{  
     font-size: 12px;
     color: var(--text-color-light);
     margin-top: 5px;
     font-weight: 600;
   }
+
+
+
 `
 
 const LinkImageContaier = styled.div`
