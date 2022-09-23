@@ -43,6 +43,10 @@ const Container = styled.div`
     color: var(--text-color-dark);
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
+
+    @media (min-width: 750px) {
+        display :none;
+    }
     
 `
 

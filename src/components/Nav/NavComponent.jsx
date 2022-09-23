@@ -86,13 +86,18 @@ const Container = styled.nav`
 const NavLink = styled(Link)`
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   color:var(--text-color-dark) ;
   padding: .8em 1em ;
 
   &:hover{
   border-radius: 20px;
   background-color:var(--background-hover);
+  }
+
+  @media (min-width:850px){
+    font-size: 14px;
+
   }
 
 `

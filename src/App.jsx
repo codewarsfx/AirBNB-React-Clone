@@ -46,8 +46,5 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
  }
 
- /* *{
-  border: 1px solid red;
- }  */
- 
+
 `

@@ -35,9 +35,13 @@ const Container= styled.div`
     align-items: center;
     justify-content: space-evenly;
     box-shadow: 2px 1px 10px #e4e4e4;
+    border: 1px solid #dddd;
     border-radius:30px;
     width: 100%;
     cursor: pointer;
+    @media (min-width: 750px) {
+        max-width: 350px;
+    }
 `
 
 
@@ -128,6 +132,7 @@ const SearchIconContainer = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
+        
 
         & > svg{
             fill: white;

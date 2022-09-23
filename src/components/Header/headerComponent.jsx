@@ -27,7 +27,9 @@ const MainHeader =styled.div`
     max-width: 1300px;
     margin:20px auto 10px;
     @media (min-width:750px){
-    min-height: 100px;
+        min-height: 100px;
+        margin: auto;
+        justify-content: space-between;
     }
 
 `
@@ -41,6 +43,10 @@ const HeaderContainer = styled.header`
     .header-rule{
         border: .3px solid #DDDDDD;
         display : none;
+
+        @media (min-width: 750px){
+            display :block;
+        }
     }
 `
 

@@ -98,7 +98,7 @@ const MainContainer = styled.div`
   }
 
   @media (min-width:750px) {
-     margin: 130px  0  0; 
+    margin: 130px  0  0;
      position: sticky; 
      top: 117px;
      box-shadow: ${({showShadow})=> showShadow ? "0px 3px 3px -3px #d4d4d4":""}; 
