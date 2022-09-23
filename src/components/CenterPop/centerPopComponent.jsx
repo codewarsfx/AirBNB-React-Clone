@@ -43,14 +43,12 @@ const CenterContainer = ({children})=>{
 
 const Container = styled(motion.div) `
         min-height: 81vh;
-        /* width:80%; */
         width:100%;
         max-width: 580px;
         background-color: white;
         border-radius: 15px;
-        /* position:absolute;
-        top: 10%;
-        left: 33%; */
+        
+     
      
 
 `

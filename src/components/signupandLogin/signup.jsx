@@ -5,7 +5,7 @@ import './signup.css'
 
 const SignUpSignIn = ({toggleModal})=>{
     return (
-       <div className="form-wrapper">
+       <div className="form-wrapper" onClick={(e) => e.stopPropagation()}         >
             <div className="form-section form-section-top">
             <CloseIcon click={toggleModal} className="icon"/>
             <p className="form-title">

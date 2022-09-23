@@ -22,10 +22,9 @@ return createPortal(
              onClick={toggleModal}
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
-             exit={{ opacity: 0 }}/>
-            <div>
-                {children}
-            </div>
+             exit={{ opacity: 0 }}>
+                     {children}
+             </ModalOverlay>
         </ModalContainer>
        ,document.getElementById("modal"))  
 }
@@ -48,6 +47,9 @@ const ModalOverlay = styled(motion.div)`
     width: 100%;
     background-color:rgba(0,0,0,.5);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 `
 
