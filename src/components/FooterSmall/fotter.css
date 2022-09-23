@@ -17,6 +17,7 @@
     fill:#aaa;
 }
 
+
 .footer-actions{
     width: 55%;
     display: flex;
@@ -31,8 +32,14 @@
     font-size: 10px;
     font-weight: 500;
     color: var(--text-color-light);
+    text-decoration: none;
     cursor: pointer;
+
 }
+
+.footer-actions-item.active{
+    color: var(--text-color-dark);
+  }
 
 .footer-actions-item.active .icon{
     stroke:var( --primary-ccolor);
@@ -40,6 +47,8 @@
     stroke-width:4;
 }
 
-.footer-actions-item.active{
-    color: var(--text-color-dark);
-  }
+
+.footer-actions-item.active .icon--last{
+    stroke-width:1.5;  
+}
+

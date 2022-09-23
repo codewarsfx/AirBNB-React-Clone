@@ -38,9 +38,14 @@ const Container= styled.div`
     border: 1px solid #dddd;
     border-radius:30px;
     width: 100%;
+    transition:box-shadow .2s ease-in;
     cursor: pointer;
     @media (min-width: 750px) {
         max-width: 350px;
+    }
+
+    :hover{
+    box-shadow:var(--box-shadow-hover);
     }
 `
 

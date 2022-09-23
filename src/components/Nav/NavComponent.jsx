@@ -66,20 +66,21 @@ const Navigation =()=>{
         <AnimatedModal 
         isModalopen={isModalopen} 
         toggleModal={toggleModal} 
-        component={<CenterContainer ><SignUpSignIn  toggleModal={toggleModal} /></CenterContainer>}/>
+        component={<CenterContainer ><SignUpSignIn type={true}  toggleModal={toggleModal} /></CenterContainer>}/>
       </Container>
     ) 
 }
 
 
 const Container = styled.nav`
-    display: flex;
+
     justify-content: space-between;
     align-items: center;
     width: 260px;
     position: relative;
-    @media (max-width: 750px) {
     display: none;
+    @media (min-width: 750px) {
+      display: flex;
     }
 `
 

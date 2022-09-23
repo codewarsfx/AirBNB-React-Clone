@@ -37,7 +37,7 @@ const FooterPopUp = ({toggleModal})=>{
             exit="exit"
         >
             <div>
-                <CloseIcon click={toggleModal}/>  
+                <CloseIcon onClick={toggleModal}/>  
                 <NavigationContainer>
                     <Navigation>
                         <p>Support</p>

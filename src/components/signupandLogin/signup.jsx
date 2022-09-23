@@ -3,11 +3,11 @@ import CloseIcon from '../CloseIcon/closeIcon'
 import './signup.css'
 
 
-const SignUpSignIn = ({toggleModal})=>{
+const SignUpSignIn = ({toggleModal,type})=>{
     return (
        <div className="form-wrapper" onClick={(e) => e.stopPropagation()}         >
             <div className="form-section form-section-top">
-            <CloseIcon click={toggleModal} className="icon"/>
+            {type &&  <CloseIcon click={toggleModal} className="icon"/>}
             <p className="form-title">
                         Log in or sign up
             </p>

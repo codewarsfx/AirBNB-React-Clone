@@ -16,7 +16,7 @@ return(
 
 const LogoLink =styled(Link)`
     margin: 0;
-    display: inline-block;
+    display: none;
     svg>path:last-child{
         display: none;
     }
@@ -26,9 +26,9 @@ const LogoLink =styled(Link)`
         display: block;
     }
     }
-    @media (max-width: 750px) {
-        display: none;
-        
+    @media (min-width: 750px) {
+   
+        display: inline-block;
     }
     
 `

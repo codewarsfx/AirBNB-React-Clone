@@ -16,7 +16,7 @@ const Home = ()=>{
             <Slider/>
             <HomeComponent/>
             <Footer/>
-            <FooterSmallComponent/>
+            {/* <FooterSmallComponent/> */}
     </>
    )
    }

@@ -2,6 +2,8 @@ import { createGlobalStyle } from "styled-components";
 import 'normalize.css'
 import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
+import SignUpSignIn from "./components/signupandLogin/signup";
+import FooterSmallComponent from "./components/FooterSmall/footerSmallComponent";
 
 
 
@@ -11,7 +13,10 @@ function App() {
      <div className="App">
       <GlobalStyle/>
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/" element={<FooterSmallComponent/>}>
+        <Route index element={<Home/>} />
+        <Route path="/register" element={<SignUpSignIn/>} />
+        </Route>
       </Routes>
     </div>
   
