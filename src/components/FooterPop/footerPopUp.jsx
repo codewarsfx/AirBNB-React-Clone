@@ -94,52 +94,76 @@ const FooterPopUp = ({toggleModal})=>{
 const FooterPopUpContainer = styled(motion.footer)`
     div {
         position: relative;
+        width: 93%;
+        height: 100%;
+        margin:auto;
     }
      position: absolute;
-     top: 55vh;
+     bottom:0%;
      left: 0;
-     border-radius: 15px;
-     min-height: 46vh;
+     border-radius: 15px 15px 0 0;
+     padding:1em 0 2em;
      width:100%;
      background-color:white;
 
+     @media(max-width: 750px){
+        display: none;
+     }
 `
 
 
 const NavigationContainer = styled.div`
-    max-width: 1300px;
-    margin:0px 0;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column;
+
+    @media (min-width:1150px){
+        flex-direction: row;
+    }
 `
 
 const Navigation =  styled.nav`
-   color: var(--text-color-dark);
-   font-size: 14px;
+        color: var(--text-color-dark);
+        font-size: 14px;
 
-   p{
-    font-weight: 600;
+    p{
+        font-weight: 600;
 
-   }
+    }
     
    ul {
-    margin: 0;
-    padding: 0;
-    list-style-type:none;
-    li{
-            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap:15px 30px;
+            border-bottom: 1px solid #ddd;
+            list-style-type:none;
+            margin: 0;
+            padding: 20px 0;
+
+            @media (min-width: 1150px){
+             display: block;
+             padding: 0;
+             border-bottom: none;
      }
-     a{
+    }
+
+
+
+        li{
+                margin-top: 0px;
+                @media (min-width: 1150px){
+                        margin-top: 20px;
+                    }
+        }
+
+     a  {
                 text-decoration: none;
                 color : inherit;
                 :hover{
                     text-decoration: underline;
                 }
      }
-
-   }
-
-
 `
 
 

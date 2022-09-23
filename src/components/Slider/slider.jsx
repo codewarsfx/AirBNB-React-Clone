@@ -206,7 +206,7 @@ const SlideArrowIcon  = styled.div`
   font-weight: bold;
   cursor: pointer;
   z-index: 1000;
-  /* box-shadow: 0px 0 px 10px 20px rgba(255,255,255,0.9); */
+  box-shadow: 0px 0px 10px 20px rgba(255,255,255,0.9);
   display: none;
 
   &:hover{

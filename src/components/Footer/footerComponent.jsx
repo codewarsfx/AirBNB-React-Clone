@@ -49,10 +49,10 @@ const FooterContainer =  styled.div`
     left: 0;
     width: 100%;
     color: var(--text-color-dark);
-    font-size: 14px;
+    font-size: 13px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
     display:none;
-    min-height:6vh;
+    min-height:8vh;
 
     .inner-wrapper{
       width: 90%;
@@ -63,6 +63,11 @@ const FooterContainer =  styled.div`
 
     @media (min-width: 750px) {
       display: flex;
+
+    }
+
+    @media (min-width: 1100px){
+      min-height:6vh;
     }
 
    a{
