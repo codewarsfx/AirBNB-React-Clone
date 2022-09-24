@@ -8,7 +8,7 @@ const normalLink = { borderColor:""}
 
 const SideLink =({name})=>{
    return (
-    <SlideElement  to={`/${name}`}  style={({ isActive })=> isActive ? activeLink :  normalLink } className='slide-element-link'>
+    <SlideElement  to='/'  style={({ isActive })=> isActive ? activeLink :  normalLink } className='slide-element-link'>
         <LinkImageContaier className='slide-img'><img src={`/assests/img/${name}.png`}  alt={`${name}`} /></LinkImageContaier>
         <span>{name}</span>
     </SlideElement>

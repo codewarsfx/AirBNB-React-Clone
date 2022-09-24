@@ -6,7 +6,7 @@ import HomeComponent from "../../components/Homes/homeComponent"
 import ImageSlider from "../../components/imageSlider/imageslider"
 import SignUpSignIn from "../../components/signupandLogin/signup"
 import Slider from "../../components/Slider/slider"
-import { Routes,Route } from "react-router-dom";
+import { Routes,Route, Outlet } from "react-router-dom";
 
 
 
@@ -19,7 +19,6 @@ const Home = ()=>{
             <HomeComponent/>
             <Footer/>
             <FooterSmallComponent/>
-            {/* <ImageSlider/> */}
     </>
    )
    }

@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<FooterSmallComponent/>}>
         <Route index element={<Home/>} />
-        <Route path="/register" element={<SignUpSignIn/>} />
+        <Route path="register" element={<SignUpSignIn/>} />
         </Route>
       </Routes>
     </div>
