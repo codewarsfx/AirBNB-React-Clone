@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import styled from "styled-components"
+
+
+const activeLink = { borderColor:"green"}
+const normalLink = { borderColor:""}
 
 
 const SideLink =({name})=>{
    return (
-    <SlideElement to="/" className='slide-element-link'>
+    <SlideElement  to={`/${name}`}  style={({ isActive })=> isActive ? activeLink :  normalLink } className='slide-element-link'>
         <LinkImageContaier className='slide-img'><img src={`/assests/img/${name}.png`}  alt={`${name}`} /></LinkImageContaier>
         <span>{name}</span>
     </SlideElement>
@@ -12,7 +16,7 @@ const SideLink =({name})=>{
 }
 
 
-const SlideElement = styled(Link)`
+const SlideElement = styled(NavLink)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,9 +24,15 @@ const SlideElement = styled(Link)`
   text-decoration: none;
   padding: .3em;
   transition: transform .4s ease-out;
+  border-bottom: 2px solid #fff;
   margin:0 4.3vw;
   :first-child{
    margin-left: 6vw;
+  }
+
+
+  :hover{
+    border-color:  #ddd;
   }
 
   @media (max-width: 380px){
