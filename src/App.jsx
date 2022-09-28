@@ -4,6 +4,7 @@ import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
 import SignUpSignIn from "./components/signupandLogin/signup";
 import FooterSmallComponent from "./components/FooterSmall/footerSmallComponent";
+import HomeComponent from "./components/Homes/homeComponent";
 
 
 
@@ -13,10 +14,10 @@ function App() {
      <div className="App">
       <GlobalStyle/>
       <Routes>
-        <Route path="/" element={<FooterSmallComponent/>}>
-        <Route index element={<Home/>} />
-        <Route path="register" element={<SignUpSignIn/>} />
-        </Route>
+         <Route path="/" element={<FooterSmallComponent/>}>
+              <Route index element = {<Home/>}/>
+              <Route path="/register" element={<SignUpSignIn/>} />
+         </Route>
       </Routes>
     </div>
   
@@ -50,9 +51,12 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   margin: 0;
  }
+
 /* 
  *{
   border: 1px solid red;
  } */
+
+
 
 `

@@ -7,6 +7,7 @@ import ImageSlider from "../../components/imageSlider/imageslider"
 import SignUpSignIn from "../../components/signupandLogin/signup"
 import Slider from "../../components/Slider/slider"
 import { Routes,Route, Outlet } from "react-router-dom";
+import SearchPop from "../../components/SearchPop/Searchpop"
 
 
 
@@ -14,11 +15,12 @@ import { Routes,Route, Outlet } from "react-router-dom";
 const Home = ()=>{
    return (
     <>  
-            <Header/>
+            {/* <Header/>
             <Slider/>
             <HomeComponent/>
             <Footer/>
-            <FooterSmallComponent/>
+            <FooterSmallComponent/> */}
+            <SearchPop/>
     </>
    )
    }

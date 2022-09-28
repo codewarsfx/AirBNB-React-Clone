@@ -1,0 +1,139 @@
+
+
+.Tab-container{
+    max-width: 900px;
+    margin:auto;
+    border-radius: 50px;
+ 
+    border: 1px solid var(--light-grey);
+}
+
+.tab-items{
+    display: flex;
+    width: 100%;
+    border-radius: 50px;
+}
+.tab-item:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.tab-item{
+    flex: 1;
+    font-size: 12px;
+    display: flex;
+    padding:.8em 3em;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+}
+.tab-item-center:after{
+   content: "";
+   position: absolute;
+   right: 0;
+   width: 1px;
+   height:35px;
+   background-color: var(--light-grey);
+}
+
+.tab-item-center--mod::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 1px;
+    height:35px;
+    background-color: var(--light-grey);
+ }
+
+.tab-item--center{
+    align-items: center;
+}
+.tab-item:first-child{
+    flex: 3;
+}
+
+.tab-item:last-child{
+    flex-direction:row;
+    display: flex;
+    justify-content: space-around;
+    padding-right: .5em;
+    flex: 2.5;
+}
+
+.tab-item p{
+    margin: 0;
+}
+
+p.tab-item-paragraph-primary,label.tab-item-paragraph-primary{
+    margin-bottom: 8px;
+    color: var( --text-color-dark);
+    font-weight: 600;
+    display: block;
+}
+
+
+
+
+.tab-item-input-element{
+    display: block;
+    border: none;
+    background-color: transparent;
+}
+.tab-item-input-element:focus{
+    outline: none;
+}
+
+.tab-item-button{
+    align-items: center;
+    display: flex;
+    border-radius: 25px;
+    background-color: var(--primary-ccolor);
+    /* width:100px; */
+    padding: 1.2em ;
+    justify-content: space-evenly;
+    border: none;
+}
+
+.tab-item-button svg{
+    width: 18px;
+    height: 18px;
+    fill:#fff;
+    stroke: white;
+    margin-bottom: 0;
+}
+
+.tab-item-button-text{
+    margin: 0 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+}
+
+.tab-item-text{
+    flex: 1.5;
+}
+
+
+/* active styles */
+
+.active {
+    background-color: rgb(235, 233, 233);
+}
+
+.active .tab-item:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+.active .tab-item:first-child{
+     background-color: white;
+     border: 1px solid var(--light-grey);
+
+}
+
+
+
+.active .tab-item-button-text{
+    display: block;
+}
