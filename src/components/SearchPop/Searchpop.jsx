@@ -2,23 +2,25 @@ import styled from "styled-components"
 import HeaderLogo from "../Logo/logocomponent"
 import Navigation from "../Nav/NavComponent"
 import SearchPopTab from "../SearchPopNav/searchpopTab"
+import { motion } from "framer-motion"
 
 const SearchPop = ()=>{
 
     const dropIn = {
         hidden: {
-          y: "-5vh",
+          y:"-10vh",
           scale:0
         },
         visible: {
-          y: "0",
+          y: "0vh",
           scale: 1,
           transition: {
-            duration: .1,
+            type: "spring",
+            duration: .5,
           },
         },
         exit: {
-        scale:0,
+         opacity:0,
           transition: {
             duration: .1,
           },
@@ -47,7 +49,7 @@ const SearchPop = ()=>{
     )
 }
 
-const Container = styled.div`
+const Container = styled(motion.div)`
     width: 100%;
     position: absolute;
     top: 0;

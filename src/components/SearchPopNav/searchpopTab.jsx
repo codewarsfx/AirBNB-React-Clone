@@ -6,10 +6,11 @@ import './searchPop.css'
 const SearchPopTab = ()=>{
 
 
-    const [isActive, setIsActive] = useState(false)
+    const [isActive, setIsActive] = useState(true)
 
 
-    const toggleActiveState = ()=>{
+    const toggleActiveState = (e)=>{
+        e.stopPropagation()
         setIsActive(isActive=>!isActive)
     }
 

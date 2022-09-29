@@ -3,14 +3,14 @@ import HeaderLogo from "../Logo/logocomponent"
 import Navigation from "../Nav/NavComponent"
 import SearchButton from "../Search/searchComponet"
 
-const Header = ()=>{
+const Header = ({toggleModal})=>{
 
     return(
 
 <HeaderContainer>
     <MainHeader>
         <HeaderLogo/>
-        <SearchButton/>
+        <SearchButton toggleModal={toggleModal}/>
         <Navigation/>
     </MainHeader>
     <hr className="header-rule"/>

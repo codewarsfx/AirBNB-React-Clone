@@ -148,12 +148,13 @@ p.tab-item-paragraph-primary,label.tab-item-paragraph-primary{
 
 .tab-dropdown{
     position: absolute;
-    top:120%;
+    top:121%;
     left:0;
     background-color:#fff;
     height:60vh;
     width:55%;
     border-radius: 30px;
     border: 1px solid var(--light-grey);
+    box-shadow: .5px .5px 30px 1px #bbb;
 
 }

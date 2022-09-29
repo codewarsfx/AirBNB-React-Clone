@@ -18,7 +18,7 @@ const Home = ()=>{
    const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-            <Header/>
+            <Header toggleModal={toggleModal} />
             <Slider/>
             <HomeComponent/>
             <Footer/>

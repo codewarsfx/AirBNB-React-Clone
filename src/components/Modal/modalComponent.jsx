@@ -20,9 +20,15 @@ return createPortal(
         <ModalContainer >  
             <ModalOverlay
              onClick={toggleModal}
-             initial={{ opacity: 0 }}
-             animate={{ opacity: 1,}}
-             exit={{ opacity: 0 }}>
+             initial={{ opacity: 1,  transition: {
+                duration: .1,
+              }, }}
+             animate={{ opacity: 1,  transition: {
+                duration: .1,
+              },}}
+             exit={{ opacity: 1,  transition: {
+                duration: .1,
+              }, }}>
                      {children}
              </ModalOverlay>
         </ModalContainer>
