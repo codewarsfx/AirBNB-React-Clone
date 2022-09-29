@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import SearchMaps from '../SearchMaps/searchMaps'
 import './searchPop.css'
 
 
@@ -26,7 +27,7 @@ const SearchPopTab = ()=>{
                     <p className='tab-item-paragraph-primary'>Check in</p>
                     <p>Add dates</p>
                 </div>
-                <div className="tab-item tab-item--center tab-item-center">
+                <div className="tab-item tab-item--center tab-item-center ">
                     <p className='tab-item-paragraph-primary'>Check out</p>
                     <p>Add dates</p>
                 </div>
@@ -42,10 +43,10 @@ const SearchPopTab = ()=>{
                 </div>
 
             </div>
-            <div className="tab-dropdown">
-
-            </div>
-        </div>
+        { isActive && <div className="tab-dropdown">
+            <SearchMaps/>
+            </div>}
+   </div>
     )
 
 

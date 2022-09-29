@@ -1,10 +1,102 @@
+import styled from "styled-components"
+import HeaderLogo from "../Logo/logocomponent"
+import Navigation from "../Nav/NavComponent"
 import SearchPopTab from "../SearchPopNav/searchpopTab"
 
-const SearchPop= ()=>{
+const SearchPop = ()=>{
+
+    const dropIn = {
+        hidden: {
+          y: "-5vh",
+          scale:0
+        },
+        visible: {
+          y: "0",
+          scale: 1,
+          transition: {
+            duration: .1,
+          },
+        },
+        exit: {
+        scale:0,
+          transition: {
+            duration: .1,
+          },
+        },
+      };
     return (
-       <SearchPopTab/>
+       <Container
+          variants={dropIn}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+       >
+        <ContainerHeader>
+            <HeaderLogo/>
+            <SearchNavigation>
+                <ul>
+                    <li><a href="#">Stays</a></li>
+                    <li><a href="#">Experiences</a></li>
+                    <li><a href="#">Online Experiences</a></li>
+                </ul>
+            </SearchNavigation>
+            <Navigation/>
+        </ContainerHeader>
+        <SearchPopTab/>
+       </Container>
     )
 }
+
+const Container = styled.div`
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:#fff;
+    padding-bottom:1em ;
+    
+`
+
+const ContainerHeader = styled.div`
+   max-width: 1300px;
+   margin: 20px auto;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+`
+
+const SearchNavigation = styled.nav`
+   width: 30%;
+   margin-left: 210px;
+    
+
+    ul{
+        margin: 0;
+        padding:0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    li{
+        list-style-type: none;
+
+
+        :first-child{
+            border-bottom: 2px solid var(--text-color-dark);
+        }
+    }
+
+
+    a{
+        text-decoration: none;
+        color: var(--text-color-dark);
+        padding: .5em 0;
+        display: block;
+
+
+    }
+`
 
 
 export default SearchPop

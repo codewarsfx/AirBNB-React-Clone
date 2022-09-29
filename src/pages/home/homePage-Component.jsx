@@ -8,19 +8,26 @@ import SignUpSignIn from "../../components/signupandLogin/signup"
 import Slider from "../../components/Slider/slider"
 import { Routes,Route, Outlet } from "react-router-dom";
 import SearchPop from "../../components/SearchPop/Searchpop"
+import useModal from "../../Hooks/useModal"
+import AnimatedModal from "../../components/animatedModal/animatedModal"
 
 
 
 
 const Home = ()=>{
+   const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-            {/* <Header/>
+            <Header/>
             <Slider/>
             <HomeComponent/>
             <Footer/>
-            <FooterSmallComponent/> */}
-            <SearchPop/>
+            <FooterSmallComponent/>
+            <AnimatedModal
+            isModalopen={isModalopen} 
+            toggleModal={toggleModal}
+            component = { <SearchPop toggleModal={toggleModal}/>}/>
+
     </>
    )
    }
