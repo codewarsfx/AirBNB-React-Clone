@@ -3,16 +3,9 @@ import SearchMaps from '../SearchMaps/searchMaps'
 import './searchPop.css'
 
 
-const SearchPopTab = ()=>{
+const SearchPopTab = ({isActive,toggleActiveState})=>{
 
 
-    const [isActive, setIsActive] = useState(true)
-
-
-    const toggleActiveState = (e)=>{
-        e.stopPropagation()
-        setIsActive(isActive=>!isActive)
-    }
 
 
     return(

@@ -50,6 +50,7 @@ const DropdownContainer = styled.div`
     background-color: #fff;
     border: .5px solid var(--light-grey);
     border-radius: 10px;
+    z-index: 1;
     
 `
 

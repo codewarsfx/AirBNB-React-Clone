@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 import HeaderLogo from "../Logo/logocomponent"
 import Navigation from "../Nav/NavComponent"
@@ -5,6 +6,15 @@ import SearchPopTab from "../SearchPopNav/searchpopTab"
 import { motion } from "framer-motion"
 
 const SearchPop = ()=>{
+
+
+    const [isActive, setIsActive] = useState(true)
+
+
+    const toggleActiveState = (e)=>{
+        e.stopPropagation()
+        setIsActive(isActive=>!isActive)
+    }
 
     const dropIn = {
         hidden: {
@@ -32,6 +42,10 @@ const SearchPop = ()=>{
           initial="hidden"
           animate="visible"
           exit="exit"
+          onClick={(e)=> {
+            e.stopPropagation()
+            setIsActive(false)
+        }}
        >
         <ContainerHeader>
             <HeaderLogo/>
@@ -44,7 +58,7 @@ const SearchPop = ()=>{
             </SearchNavigation>
             <Navigation/>
         </ContainerHeader>
-        <SearchPopTab/>
+        <SearchPopTab isActive={isActive} toggleActiveState= {toggleActiveState}/>
        </Container>
     )
 }
@@ -61,6 +75,7 @@ const Container = styled(motion.div)`
 
 const ContainerHeader = styled.div`
    max-width: 1300px;
+   width: 95%;
    margin: 20px auto;
    display: flex;
    justify-content: space-between;
@@ -69,7 +84,7 @@ const ContainerHeader = styled.div`
 
 const SearchNavigation = styled.nav`
    width: 30%;
-   margin-left: 210px;
+   /* margin-left: 210px; */
     
 
     ul{
