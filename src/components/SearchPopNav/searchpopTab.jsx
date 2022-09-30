@@ -9,7 +9,7 @@ const SearchPopTab = ({isActive,toggleActiveState})=>{
 
 
     return(
-    <div className={`Tab-container ${ isActive && 'active'}`} onClick={toggleActiveState}>
+    <div className={`Tab-container ${ isActive && 'active-tab'}`} onClick={toggleActiveState}>
             <div className="tab-items">
                 <div className="tab-item ">
                     <div className="tab-item-input-container">

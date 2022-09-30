@@ -38,7 +38,8 @@
 }
 
 .footer-actions-item.active{
-    color: var(--text-color-dark);
+    /* color: var(--text-color-dark); */
+    background-color: none;
   }
 
 .footer-actions-item.active .icon{

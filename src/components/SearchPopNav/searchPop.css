@@ -126,15 +126,15 @@ p.tab-item-paragraph-primary,label.tab-item-paragraph-primary{
 
 /* active styles */
 
-.active {
+.active-tab {
     background-color: rgb(235, 233, 233);
 }
 
-.active .tab-item:hover{
+.active-tab .tab-item:hover{
     background-color: rgb(220, 220, 220);
 }
 
-.active .tab-item:first-child{
+.active-tab .tab-item:first-child{
      background-color: white;
      border: 1px solid var(--light-grey);
 
@@ -142,7 +142,7 @@ p.tab-item-paragraph-primary,label.tab-item-paragraph-primary{
 
 
 
-.active .tab-item-button-text{
+.active-tab .tab-item-button-text{
     display: block;
 }
 

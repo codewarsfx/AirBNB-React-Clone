@@ -30,8 +30,12 @@
 
 .searchmap-item-image{
     border: 1px solid var(--light-grey);
-
 }
+
+.searchmap-item-image:hover {
+    border: 1px solid var(--text-color-dark);
+}
+
 
 .searchmap-item{
     width: 31%;
