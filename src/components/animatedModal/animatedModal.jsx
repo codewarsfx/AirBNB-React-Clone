@@ -3,21 +3,22 @@ import { AnimatePresence } from "framer-motion"
 import Modal from "../Modal/modalComponent"
 
 
-const AnimatedModal = ({component,isModalopen,toggleModal})=> {
-
+const AnimatedModal = ({component,isModalopen,toggleModal,small})=> {
 
     return(
         <AnimatePresence
+
         initial={false}
-        exitBeforeEnter={true}
+        mode='wait'
         onExitComplete={() => null}>
-                                 { isModalopen && (<Modal toggleModal={toggleModal}>
+                                 { isModalopen && (<Modal small={small} toggleModal={toggleModal}>
                                                         {component}
                                                  </Modal>)}                    
          </AnimatePresence>
     )
 
 }
+
 
 
 export default AnimatedModal

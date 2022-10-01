@@ -70,6 +70,14 @@ const Container = styled(motion.div)`
     left: 0;
     background-color:#fff;
     padding-bottom:1em ;
+
+    @media (max-width: 750px){
+
+
+    display: none;
+
+
+}
     
 `
 

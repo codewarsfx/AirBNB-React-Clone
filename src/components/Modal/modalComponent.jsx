@@ -1,11 +1,11 @@
 import { createPortal } from "react-dom"
 import { motion } from "framer-motion"
-import styled from "styled-components"
+import styled, {css} from "styled-components"
 import { useEffect } from "react"
 
 
 
-const Modal = ({children,toggleModal}) => {
+const Modal = ({children,toggleModal,small}) => {
 
 
 useEffect(()=>{
@@ -17,8 +17,8 @@ useEffect(()=>{
 },[])
 
 return createPortal(
-        <ModalContainer >  
-            <ModalOverlay
+        <ModalContainer small={small}>  
+             <ModalOverlay
              onClick={toggleModal}
              initial={{ opacity: 1,  transition: {
                 duration: .1,
@@ -43,6 +43,12 @@ const ModalContainer = styled.div`
     height: 100%;
     width: 100%;
     z-index: 1000000;
+
+    ${props => props.small && css`
+     @media (min-width:750px){
+        display: none;
+     }
+  `};
 `
 
 const ModalOverlay = styled(motion.div)`
@@ -56,6 +62,10 @@ const ModalOverlay = styled(motion.div)`
     display: flex;
     align-items: center;
     justify-content: center;
+
+
+
+    
 
 `
 
