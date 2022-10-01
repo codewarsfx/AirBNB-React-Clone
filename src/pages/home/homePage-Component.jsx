@@ -10,6 +10,7 @@ import { Routes,Route, Outlet } from "react-router-dom";
 import SearchPop from "../../components/SearchPop/Searchpop"
 import useModal from "../../Hooks/useModal"
 import AnimatedModal from "../../components/animatedModal/animatedModal"
+import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 
 
 
@@ -18,7 +19,7 @@ const Home = ()=>{
    const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-            <Header toggleModal={toggleModal} />
+            {/* <Header toggleModal={toggleModal} />
             <Slider/>
             <HomeComponent/>
             <Footer/>
@@ -26,7 +27,9 @@ const Home = ()=>{
             <AnimatedModal
             isModalopen={isModalopen} 
             toggleModal={toggleModal}
-            component = { <SearchPop toggleModal={toggleModal}/>}/>
+            component = { <SearchPop toggleModal={toggleModal}/>}/> */}
+
+            <SearchPopSmall/>
 
     </>
    )
