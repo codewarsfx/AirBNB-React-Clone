@@ -1,0 +1,145 @@
+.searchsmall-container{
+    background-color: #eee;
+    min-height: 100vh;
+}
+
+@media (min-width: 750px){
+    .searchsmall-container{
+        display: none;
+
+}
+}
+.searchsmall-wrapper{
+    width: 95%;
+    margin: auto;
+    padding: 1em 0;
+
+}
+.searchsmall-header-tab{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.searchsmall-header-tab ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 40vw;
+}
+
+.searchsmall-header{
+    display: flex;
+    align-items: center;
+}
+
+.searchsmall-header-tab-link{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    padding: .3em 0;
+}
+
+.searchsmall-header-tab-link--active{
+    border-bottom: 2px solid var(--text-color-dark);
+    color: var(--text-color-dark);
+}
+
+.searchsmall-main-title{
+    font-weight: 600;
+    font-size: 1.4em;
+    color: var(--text-color-dark);
+}
+
+.searchsmall-main-input{
+    padding: 1.1em 1.5em;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    display:flex ;
+    align-items: center;
+    width: 95%;
+}
+
+.searchsmall-main-input-element{
+    border: none;
+    margin-left: 2%;
+}
+
+.searchsmall-main-input-element:focus{
+    outline: none;
+}
+
+.searchsmall-main-input-element::placeholder{
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+  
+}
+
+
+.searchsmall-main{
+    background-color: #fff;
+    padding: 0px 0 15px 20px;
+    border-radius: 20px;
+    margin-top: 4.5vh;
+    border: 1px solid var(--light-grey);
+    box-shadow:1px 1px 20px #ccc;
+}
+
+.searchsmall-main-map{
+    display: flex;
+    overflow-x: scroll;
+    margin: 20px 0 0;
+    padding-right: 20px;
+    
+    -webkit-overflow-scrolling: touch;
+}
+.searchsmall-main-map::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+  }
+
+.searchmap-item--small{
+    min-width: 28%;
+}
+
+.searchmap-item--small--active{
+    font-weight: 600;
+}
+
+.searchmap-item--small--active .searchmap-item-image{
+border: 2px solid var(--text-color-dark);
+
+   
+}
+
+.searchmap-item--small:not(:first-child){
+    margin-left: 18px;
+}
+
+.searchsmall-main-input  svg{
+    width: 17px;
+    height: 17px;
+    stroke-width: 1;
+    display: inline-block;
+    fill:var(--text-color-dark);
+    stroke: var(--text-color-dark);
+    margin: 0;
+}
+
+.searchmap-bar{
+    padding:1.4em;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    border-radius: 15px;
+    font-size: 14px;
+    margin-top: 1.5vh;
+    box-shadow:0 .1px 10px -8px #ccc;
+}
+
+.searchmap-bar-left{
+    color: var(--text-color-dark);
+    font-weight: 600;
+}

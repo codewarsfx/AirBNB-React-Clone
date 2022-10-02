@@ -7,6 +7,36 @@
 }
 
 
+
+@media (max-width: 750px){
+    .register-header{
+        display: none;
+    }
+}
+
+@media (min-width: 750px){
+    .form-wrapper.active {
+        max-width: 550px;
+        margin: 50px auto;
+        border-radius: 20px;
+        border: 1px solid var(--text-color-dark);
+        padding: 0 0 2em;
+    
+    }
+
+    .register-header{
+        padding: 2em 10em;
+        display: flex;
+        border-bottom: 1px solid var(--light-grey);
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
 .form-section{
     color: var( --text-color-dark);
     padding:.5em 1.8em;

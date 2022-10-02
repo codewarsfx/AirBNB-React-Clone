@@ -35,6 +35,9 @@ const Home = ()=>{
             small
             component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
 
+
+
+
     </>
    )
    }
