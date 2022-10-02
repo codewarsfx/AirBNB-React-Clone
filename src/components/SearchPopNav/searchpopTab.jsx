@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import SearchMaps from '../SearchMaps/searchMaps'
 import './searchPop.css'
 

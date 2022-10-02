@@ -1,6 +1,5 @@
-import useModal from '../../Hooks/useModal'
+
 import CloseIcon from '../CloseIcon/closeIcon'
-import FooterPopUp from '../FooterPop/footerPopUp'
 import HeaderLogo from '../Logo/logocomponent'
 import Navigation from '../Nav/NavComponent'
 import './signup.css'

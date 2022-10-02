@@ -8,7 +8,7 @@ const NavDropdown = ({toggleModal,toggleDropDownOnClick}) => {
 
     const showRegisterModal = ()=>{
         toggleModal()
-        toggleDropDownOnClick()
+        toggleDropDownOnClick();
     }
 return (
     <DropdownContainer>

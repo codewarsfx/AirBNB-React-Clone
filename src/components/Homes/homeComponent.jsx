@@ -1,5 +1,6 @@
 import "./home.css"
-import {home} from './homeData'
+import {home} from './homeData';
+
 import HomeDetail from "../HomeDetails/homeDetail"
 
 const HomeComponent =()=>{

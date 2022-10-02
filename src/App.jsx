@@ -4,7 +4,6 @@ import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
 import SignUpSignIn from "./components/signupandLogin/signup";
 import FooterSmallComponent from "./components/FooterSmall/footerSmallComponent";
-import HomeComponent from "./components/Homes/homeComponent";
 
 
 
