@@ -32,7 +32,7 @@ const SearchButton =  ({toggleModal})=>{
 }
 
 const Container= styled.div`
-    padding: .5em 0;
+    padding: .6em 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -54,7 +54,6 @@ const Container= styled.div`
 
 const SearchTextContainer = styled.div`
  width: 65%;
- font-size: 1vw;
 @media (min-width: 750px) {
        width: 80%;
     }
@@ -63,7 +62,7 @@ const SearchTextContainer = styled.div`
 
 const SearchText= styled.p`
     margin: 0;
-    font-size: 12px;
+    font-size: 3vw;
     display: flex;
     align-items: center;
 
