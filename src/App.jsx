@@ -52,9 +52,9 @@ const GlobalStyle = createGlobalStyle`
  }
 
 
- /* *{
+ *{
   border: 1px solid red;
- } */
+ }
 
 
 
