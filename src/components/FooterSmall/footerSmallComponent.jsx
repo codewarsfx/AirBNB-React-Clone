@@ -9,7 +9,7 @@ import styled from "styled-components"
 import "./fotter.css"
 
 const FooterSmallComponent = ()=>{
-    const [showFooter,setShowFooter] = useState(true)
+    const [showFooter,setShowFooter] = useState(false)
 
     useEffect(()=>{
     window.addEventListener('scroll',function(ev) {

@@ -53,7 +53,7 @@ const Container= styled.div`
 
 
 const SearchTextContainer = styled.div`
- width: 65%;
+ width: 70%;
 @media (min-width: 750px) {
        width: 80%;
     }
@@ -62,7 +62,7 @@ const SearchTextContainer = styled.div`
 
 const SearchText= styled.p`
     margin: 0;
-    font-size: 3.5vw;
+    font-size:12px;
     display: flex;
     align-items: center;
 
