@@ -62,7 +62,7 @@ const SearchTextContainer = styled.div`
 
 const SearchText= styled.p`
     margin: 0;
-    font-size: 3vw;
+    font-size: 3.5vw;
     display: flex;
     align-items: center;
 

@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { useEffect } from "react"
 import {  Outlet,NavLink } from "react-router-dom"
 import styled from "styled-components"
 
@@ -7,14 +9,25 @@ import styled from "styled-components"
 import "./fotter.css"
 
 const FooterSmallComponent = ()=>{
+    const [showFooter,setShowFooter] = useState(true)
 
+    useEffect(()=>{
+    window.addEventListener('scroll',function(ev) {
+        if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight) {
+          setShowFooter(true)
+        }
+        else{
+            setShowFooter(false)
+        }
+    })
 
+    },[])
 
     return (
         <>{
             <Outlet/>
         }
-        <Container>
+        <Container showFooter={showFooter}>
             
             <div className="footer-actions">
                 <NavLink to="/"  className={`footer-actions-item ${({ isActive }) =>
@@ -39,6 +52,7 @@ const FooterSmallComponent = ()=>{
 
 
 const Container = styled.div`
+  
     background-color:white;
     position: fixed;
     bottom:0;
@@ -51,6 +65,7 @@ const Container = styled.div`
     color: var(--text-color-dark);
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
+    display: ${({showFooter})=> showFooter? 'none':'flex'};
 
     @media (min-width: 750px) {
         display :none;

@@ -36,10 +36,14 @@
     cursor: pointer;
 
 }
+.footer-actions-item{
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
 
 .footer-actions-item.active{
-    /* color: var(--text-color-dark); */
-    background-color: none;
+    color: var(--text-color-dark);
+
   }
 
 .footer-actions-item.active .icon{
