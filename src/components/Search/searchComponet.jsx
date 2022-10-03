@@ -54,6 +54,7 @@ const Container= styled.div`
 
 const SearchTextContainer = styled.div`
  width: 65%;
+ font-size: 1vw;
 @media (min-width: 750px) {
        width: 80%;
     }
