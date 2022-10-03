@@ -32,7 +32,7 @@ const SearchButton =  ({toggleModal})=>{
 }
 
 const Container= styled.div`
-    padding: 10px 0;
+    padding: .5em 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
