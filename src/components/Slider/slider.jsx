@@ -167,6 +167,7 @@ const SlideContainerWindow = styled.div`
     overflow-y: hidden;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
   ::-webkit-scrollbar {
     display: none;
     width: 0px;
@@ -183,6 +184,7 @@ const SlideElementGroup = styled.div`
 
    @media (min-width:950px) {
     min-width:100%;
+    scroll-snap-align: center;
   }
 
    

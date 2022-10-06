@@ -51,6 +51,10 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
  }
 
+ *{
+   -webkit-tap-highlight-color: transparent !important;
+ }
+
 
  /* *{
   border: 1px solid red;

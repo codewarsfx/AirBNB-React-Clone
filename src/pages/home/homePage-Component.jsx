@@ -34,9 +34,9 @@ const Home = ()=>{
             isModalopen={isModalopen} 
             toggleModal={toggleModal}
             small
-            component = { <SearchPopSmall   toggleModal={toggleModal} />}/> 
+            component = { <SearchPopSmall   toggleModal={toggleModal} />}/>  */}
             
- */}
+
 
  <HomeHero/>
 

@@ -3,9 +3,14 @@
     display:flex;
     scroll-padding: 30px 30px 30px 30px;
     overflow-y: auto;
-    overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
     height: 46vh;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-container::-webkit-scrollbar {
+    display: none;
+    width: 0px;
   }
   
   .hero-container-image {
