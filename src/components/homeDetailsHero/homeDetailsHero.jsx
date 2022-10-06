@@ -3,8 +3,8 @@ import './homehero.css'
 const HomeHero =()=>{
 
     return (
-        <div className="hero-container">
-          <div className="hero-container-image">
+            <div className="hero-wrapper">
+          <div className="hero-container-image big">
             <img src="/assests/img/homes/cabin.jpeg" alt="cabin" srcset="" />
           </div>
           <div className="hero-container-image">
@@ -19,7 +19,8 @@ const HomeHero =()=>{
           <div className="hero-container-image">
             <img src="/assests/img/homes/shed.jpeg" alt="cabin" srcset="" />
           </div>
-        </div>
+          </div>
+      
     )
 
 }
