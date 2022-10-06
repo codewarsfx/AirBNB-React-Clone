@@ -1,0 +1,21 @@
+.hero-container {
+    margin: 0 auto;
+    display:flex;
+    scroll-padding: 30px 30px 30px 30px;
+    overflow-y: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    height: 46vh;
+  }
+  
+  .hero-container-image {
+    scroll-snap-align: center;
+    min-width: 100%;
+  }
+  
+  .hero-container-image img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
