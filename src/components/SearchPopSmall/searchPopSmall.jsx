@@ -3,6 +3,8 @@ import './searchPopSmall.css'
 import { motion } from "framer-motion"
 const SearchPopSmall =({toggleModal})=>{
 
+  console.log(toggleModal)
+
     const dropIn = {
         hidden: {
           y:"100vh",
@@ -56,12 +58,15 @@ const SearchPopSmall =({toggleModal})=>{
       initial="hidden"
       animate="visible"
       exit="exit"
+      onClick={(e)=> {
+        e.stopPropagation()
+    }}
       
       >
         <div className="searchsmall-wrapper">
 
         <header className="searchsmall-header">
-            <CloseIcon secondary onClick={toggleModal}/>
+            <CloseIcon secondary click={toggleModal}/>
             <nav className="searchsmall-header-tab">
                 <ul>
                     <li><a href="#" className="searchsmall-header-tab-link searchsmall-header-tab-link--active">Stays</a></li>

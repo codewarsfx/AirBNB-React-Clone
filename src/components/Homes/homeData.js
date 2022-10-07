@@ -1,7 +1,7 @@
 export const home = [
     {
         name :"Los Realejos, Spain",
-        rating : 5.00,
+        rating : 4.91,
         image: "cabin",
         location:"Playa del Socorro",
         date:"sep 24 - 29",

@@ -4,6 +4,7 @@ import Home from './pages/home/homePage-Component'
 import { Routes,Route } from "react-router-dom";
 import SignUpSignIn from "./components/signupandLogin/signup";
 import FooterSmallComponent from "./components/FooterSmall/footerSmallComponent";
+import AirbBnbDetails from "./pages/AirbnbDetails/airbnbdetails";
 
 
 
@@ -17,6 +18,7 @@ function App() {
               <Route index element = {<Home/>}/>
               <Route path="/register" element={<SignUpSignIn/>} />
          </Route>
+         <Route path="/homes" element={<AirbBnbDetails/>}/>
       </Routes>
     </div>
   

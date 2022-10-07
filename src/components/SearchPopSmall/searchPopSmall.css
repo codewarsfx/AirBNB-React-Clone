@@ -11,8 +11,8 @@
 }
 }
 .searchsmall-wrapper{
-    width: 90vw;
-    margin:5vh auto;
+    width: 95vw;
+    margin:3vh auto;
    
 }
 .searchsmall-header-tab{
@@ -101,7 +101,7 @@
   }
 
 .searchmap-item--small{
-    min-width: 28%;
+    min-width: 35%;
 }
 
 .searchmap-item--small--active{

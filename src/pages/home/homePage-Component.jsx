@@ -21,7 +21,7 @@ const Home = ()=>{
    const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-            {/* <Header toggleModal={toggleModal} />
+             <Header toggleModal={toggleModal} />
             <Slider/>
             <HomeComponent/>
             <Footer/>
@@ -35,14 +35,11 @@ const Home = ()=>{
             isModalopen={isModalopen} 
             toggleModal={toggleModal}
             small
-            component = { <SearchPopSmall   toggleModal={toggleModal} />}/>  */}
+            component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
             
 
 
 
- <HomeDetailsHeader/>
-  <HomeHero/>
- 
 
 
 

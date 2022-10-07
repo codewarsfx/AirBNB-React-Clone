@@ -7,7 +7,15 @@
 
 .home-group-top {
     border-radius: 15px;
-    height: 43vh;
+    height: 42vh;
+}
+
+@media (min-width: 450px) {
+  .home-group-top{
+    height: 59vh;
+  }
+
+
 }
 
 @media (min-width: 550px) {
