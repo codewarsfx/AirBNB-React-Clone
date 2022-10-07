@@ -12,6 +12,7 @@ import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 
 import "./home.css"
 import HomeHero from "../../components/homeDetailsHero/homeDetailsHero"
+import HomeDetailsHeader from "../../components/HomeDetailsHeader/homeDetailsHeader"
 
 
 
@@ -38,7 +39,10 @@ const Home = ()=>{
             
 
 
- <HomeHero/>
+
+ <HomeDetailsHeader/>
+  <HomeHero/>
+ 
 
 
 

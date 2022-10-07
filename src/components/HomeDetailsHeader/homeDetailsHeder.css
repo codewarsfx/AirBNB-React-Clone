@@ -1,0 +1,34 @@
+.details-icon{
+    overflow: visible;
+    stroke-width: 2; 
+    stroke: var(--text-color-dark);
+    width: 16px;
+    height: 16px;
+    fill: none;
+    display: block;
+}
+
+.details-icon--big{
+    stroke-width: 4;
+}
+
+.details-header-wrapper{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 1.45em 0;
+}
+
+.details-icon-right{
+    margin-left: auto;
+    display: flex;
+}
+.details-icon-right svg:first-child{
+    margin-right: 20px;
+}
+
+@media(min-width: 745px){
+    .details-header{
+        display: none;
+    }
+}
