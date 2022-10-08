@@ -41,3 +41,26 @@
 }
 
 
+/* second section styles */
+
+.details-description-illustration{
+    display: inline-block;
+     height: 45px; 
+     width: 45px; 
+     fill: rgb(227, 28, 95);
+      stroke:var(--light-grey);
+      margin-top: -2%;
+}
+.details-description-status{
+    color:var(--text-color-dark);
+    font-size: 15px;
+}
+
+.details-description--flexed{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
