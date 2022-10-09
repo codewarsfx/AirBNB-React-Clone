@@ -42,6 +42,7 @@
 .details-description-stats-primary{
     font-weight: 600;
     text-decoration: underline;
+
 }
 
 .details-description-stats-icon{
@@ -114,6 +115,7 @@
     color: var(--text-color-dark);
     font-weight: 600;
     margin: 0 0 .3em 0;
+    line-height: 1.6;
 }
 
 .details-description-item{
@@ -137,8 +139,10 @@
 .details-description-item-link{
     font-size: 14px;
     color: var(--text-color-dark);
-    font-weight: 600;    display: inline-block;
+    font-weight: 600;    display: inline-flex;
     margin-bottom: 1em;
+    align-items: center;
+    
 }
 
 
