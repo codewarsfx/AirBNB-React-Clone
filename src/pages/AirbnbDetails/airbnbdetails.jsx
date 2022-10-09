@@ -12,6 +12,7 @@ import HomeHero from '../../components/homeDetailsHero/homeDetailsHero'
 import './airbnbdetails.css'
 const AirbBnbDetails = ()=>{
     return (
+    <> 
    <div className="details-container">
         <HomeDetailsHeader/>
         <HomeHero/>
@@ -210,6 +211,21 @@ const AirbBnbDetails = ()=>{
         </button>
         </div>
    </div>
+   <div className="details-checkout">
+    <div className="details-checkout-left">
+            <p style={{margin:"0px"}}>
+                <span className='detail-description-text-primary'>82</span>
+                <span className='detail-description-text-sec'> night</span>
+            </p>
+            <a href="#" className="details-description-item-link" >Oct 18-23</a>
+        </div>
+
+        <button className="footer-btn">
+            Reserve
+        </button>
+   </div>
+
+   </>
     )
 }
 

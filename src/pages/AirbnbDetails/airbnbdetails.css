@@ -1,6 +1,6 @@
 .details-description{
     width: 90%;
-    margin: auto;
+    margin:auto ;
     padding: .7em 0;
     border-bottom: 1px solid var(--light-grey);
 }
@@ -167,3 +167,28 @@
     text-decoration: line-through;
 }
 
+
+.details-checkout{
+    display: flex;
+    padding:.8em 2em ;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-top: 1px solid var(--light-grey);
+}
+
+
+.footer-btn{
+    color: #fff;
+    background-color: var( --primary-ccolor);
+    border: none;
+    padding: .8em 1.5em;
+    border-radius: 8px;
+}
+
+.details-container{
+    margin-bottom: 20vh;
+}
