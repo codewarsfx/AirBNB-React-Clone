@@ -140,3 +140,26 @@
     font-weight: 600;    display: inline-block;
     margin-bottom: 1em;
 }
+
+
+/* fifth section */
+
+.details-description-btn{
+    display:block;
+    width: 100%;
+    padding: .9em;
+    background: none;
+    border: 1px solid var(--text-color-dark);
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+.detail-description-text-primary--light{
+    font-weight:400;
+}
+
+.detail-description-text-line{
+    text-decoration: line-through;
+}
+
