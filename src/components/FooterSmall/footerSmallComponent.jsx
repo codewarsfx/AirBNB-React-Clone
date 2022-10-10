@@ -61,7 +61,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 8.5vh;
+    min-height: 10vh;
     color: var(--text-color-dark);
     font-size: 14px;
     box-shadow: 0px -3px 3px -3px #d4d4d4;
