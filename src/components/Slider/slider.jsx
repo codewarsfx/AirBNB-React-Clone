@@ -173,7 +173,6 @@ const SlideContainerWindow = styled.div`
     width: 0px;
   }
 
-
 `
 
 const SlideElementGroup = styled.div`

@@ -8,7 +8,7 @@ const useModal = ()=>{
     }
 
 
-    return {isModalopen,toggleModal}
+    return  {isModalopen,toggleModal}
 
 }
 

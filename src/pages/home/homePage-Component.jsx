@@ -13,6 +13,7 @@ import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 import "./home.css"
 import HomeHero from "../../components/homeDetailsHero/homeDetailsHero"
 import HomeDetailsHeader from "../../components/HomeDetailsHeader/homeDetailsHeader"
+import CheckoutBox from "../../components/CheckoutBox/cheackoutBox"
 
 
 
@@ -21,7 +22,7 @@ const Home = ()=>{
    const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-             <Header toggleModal={toggleModal} />
+            <Header toggleModal={toggleModal} />
             <Slider/>
             <HomeComponent/>
             <Footer/>
@@ -36,14 +37,6 @@ const Home = ()=>{
             toggleModal={toggleModal}
             small
             component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
-            
-
-
-
-
-
-
-
     </>
    )
    }

@@ -16,8 +16,7 @@
         display: grid;
         grid-template-columns: repeat(4,1fr);
         gap: 10px;
-        width: 90%;
-        max-width: 1100px;
+   
         height: 20%;
         margin: auto;
         
