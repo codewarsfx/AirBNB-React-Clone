@@ -195,8 +195,7 @@
 		margin: 0;
 	}
 	.details-container {
-		width: 90%;
-		max-width: 1050px;
+		width: 85%;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
@@ -344,8 +343,8 @@
 	}
 
 	.headerBig-wrapper {
-		max-width: 1050px;
-		margin: auto;
+		width: 85%;
+        margin: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
