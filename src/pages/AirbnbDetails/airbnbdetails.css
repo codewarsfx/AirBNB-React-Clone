@@ -195,7 +195,8 @@
 		margin: 0;
 	}
 	.details-container {
-		width: 85%;
+		width: 90%;
+		max-width: 1200px;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
@@ -216,7 +217,7 @@
 		position: absolute;
 		width: 35%;
 		max-width: 350px;
-		min-height: 80%;
+		min-height: 85%;
 		right: 0;
 		top: 0;
 		display: flex;
@@ -343,8 +344,8 @@
 	}
 
 	.headerBig-wrapper {
-		width: 85%;
-        margin: auto;
+		max-width: 1200px;
+		margin: auto;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
