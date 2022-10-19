@@ -92,6 +92,7 @@ const MainContainer = styled.div`
   position: fixed;
   top: 84px;
   background-color:white;
+  z-index:2;
 
   @media (max-width:750px) {
     box-shadow:0px 3px 3px -3px #d4d4d4;
@@ -101,7 +102,8 @@ const MainContainer = styled.div`
     margin: 130px  0  0;
      position: sticky; 
      top: 117px;
-     box-shadow: ${({showShadow})=> showShadow ? "0px 3px 3px -3px #d4d4d4":""}; 
+     box-shadow: ${({ showShadow }) => showShadow ? "0px 3px 3px -3px #d4d4d4" : ""}; 
+     
   }
 `
 

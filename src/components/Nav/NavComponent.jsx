@@ -78,6 +78,7 @@ const Container = styled.nav`
     align-items: center;
     width: 260px;
     position: relative;
+
     display: none;
     @media (min-width: 750px) {
       display: flex;

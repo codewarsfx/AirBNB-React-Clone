@@ -53,6 +53,7 @@ const FooterContainer =  styled.div`
     box-shadow: 0px -3px 3px -3px #d4d4d4;
     display:none;
     min-height:8vh;
+    z-index: 1000;
 
     .inner-wrapper{
       width: 90%;

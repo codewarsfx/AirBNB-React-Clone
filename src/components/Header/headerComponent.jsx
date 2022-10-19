@@ -20,7 +20,8 @@ const Header = ({toggleModal})=>{
     )
 }
 
-const MainHeader =styled.div`
+const MainHeader = styled.div`
+
     display: flex;
     align-items: center;
     width: 90%;
@@ -39,7 +40,7 @@ const HeaderContainer = styled.header`
     position: fixed;
     top:0;
     background-color: #fff;
-    z-index: 1;
+    z-index: 1000;
     .header-rule{
         border: .3px solid #DDDDDD;
         display : none;

@@ -14,6 +14,7 @@ import "./home.css"
 import HomeHero from "../../components/homeDetailsHero/homeDetailsHero"
 import HomeDetailsHeader from "../../components/HomeDetailsHeader/homeDetailsHeader"
 import CheckoutBox from "../../components/CheckoutBox/cheackoutBox"
+import ImageSlider from "../../components/imageSlider/imageslider"
 
 
 
@@ -37,6 +38,7 @@ const Home = ()=>{
             toggleModal={toggleModal}
             small
             component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
+           
     </>
    )
    }

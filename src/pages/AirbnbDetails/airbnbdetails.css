@@ -9,6 +9,7 @@
 }
 .details-description--last {
 	border: none;
+
 }
 
 .details-description-seperation {
@@ -350,5 +351,6 @@
 		justify-content: space-between;
 		align-items: center;
 	}
+
 }
 

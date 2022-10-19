@@ -52,7 +52,7 @@ const FooterSmallComponent = ()=>{
 
 
 const Container = styled.div`
-  
+        z-index: 1000;
     background-color:white;
     position: fixed;
     bottom:0;

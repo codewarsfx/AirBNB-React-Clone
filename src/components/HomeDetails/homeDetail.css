@@ -8,6 +8,8 @@
 .home-group-top {
     border-radius: 15px;
     height: 42vh;
+    overflow-y: auto;
+ 
 }
 
 @media (min-width: 450px) {
