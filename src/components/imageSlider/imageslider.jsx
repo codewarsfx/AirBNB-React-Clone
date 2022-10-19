@@ -1,69 +1,94 @@
-import './imageSlider.css'
-import { useState } from 'react'
-import {GoChevronLeft, GoChevronRight} from 'react-icons/go'
+import "./imageSlider.css";
+import { useState } from "react";
+import { GoChevronLeft, GoChevronRight } from "react-icons/go";
+import { Link } from 'react-router-dom'
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-const ImageSlider = ()=>{
-    const [moveby,setmoveby] = useState(0)
+const ImageSlider = ({ images }) => {
+	const [moveby, setmoveby] = useState(0);
 
+	const moveright = () => {
+		if (moveby > -500) {
+			setmoveby(moveby - 100);
+		}
+	};
 
-    const moveright=()=>{
-        if(moveby > -500){
-          setmoveby(moveby-100)
-        }
-      }
-  
-    const moveleft =()=>{
-      if(moveby !== 0){
-        setmoveby(moveby+100)
-      }
-    }
+	const moveleft = () => {
+		if (moveby <= 0) {
+			setmoveby(moveby + 100);
+		}
+	};
 
+	return (
+		<SliderContainer>
+			{moveby > -400 ? (
+				<SlideArrowIconRight
+					className='arrow-container arrow-left'
+					onClick={moveright}
+				>
+					<GoChevronRight />
+				</SlideArrowIconRight>
+			) : null}
+			{moveby !== 0 ? (
+				<SlideArrowIconLeft
+					className='arrow-container arrow-left'
+					onClick={moveleft}
+				>
+					<GoChevronLeft />
+				</SlideArrowIconLeft>
+			) : null}
+			<div className='slider-window'>
+				{images.map((image) => (
+					<Link className='slider-image'  to='/homes'><img
+            src='/assests/img/homes/cabin.jpeg'
+            className='slider-image' 
+						alt='home picture'
+						style={{ transform: `translateX(${moveby}%)` }}
+					/></Link>
+				))}
+			</div>
+		</SliderContainer>
+	);
+};
 
-    return (
-      <div className='slider-container'>
-          {moveby > -500 ? <SlideArrowIconRight onClick={moveright} ><GoChevronRight/></SlideArrowIconRight> : null}
-          {moveby !== 0 ? <SlideArrowIconLeft className="arrow-container arrow-left" onClick={moveleft}><GoChevronLeft/></SlideArrowIconLeft>:null} 
-        <div className="slider-window">
-            <img src="/assests/img/homes/cabin.jpeg" alt="home picture"  className='slider-image' style={{ transform: `translateX(${moveby}%)` }}/>
-            <img src="/assests/img/homes/cabin.jpeg" alt="home picture"  className='slider-image' style={{ transform: `translateX(${moveby}%)` }}/>
-            <img src="/assests/img/homes/cabin.jpeg" alt="home picture" className='slider-image' style={{ transform: `translateX(${moveby}%)` }}/>
-          <img src="/assests/img/homes/cabin.jpeg" alt="home picture" className='slider-image' style={{ transform: `translateX(${moveby}%)` }}/>
-          <img src="/assests/img/homes/cabin.jpeg" alt="home picture" className='slider-image'  style={{ transform: `translateX(${moveby}%)` }}/>
-   
-        </div>
-      </div>
-    )
-}
+const SliderContainer = styled.div`
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: inline;
 
+	:hover {
+		.arrow-container {
+			visibility: visible;
+		}
+	}
+`;
 
-const SlideArrowIcon  = styled.div`
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top:50%;
-  transform:translateY(-50%);
-  border: 1px solid var(--light-grey);
-  border-radius: 50%;
-  align-items: center;
-  justify-content: center;
-  background-color:white;
-  color: black;
-  visibility: hidden;
-  cursor: pointer;
-  z-index: 1;
-  display: flex;
-
-
-
-`
+const SlideArrowIcon = styled.div`
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	border: 1px solid var(--light-grey);
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.8);
+	color: black;
+	visibility: hidden;
+	transition: visibility 0.2s ease;
+	cursor: pointer;
+	z-index: 1;
+	display: flex;
+`;
 
 const SlideArrowIconLeft = styled(SlideArrowIcon)`
-  left: 5%;
-`
+	left: 5%;
+`;
 const SlideArrowIconRight = styled(SlideArrowIcon)`
-   right: 5%;
-`
+	right: 5%;
+`;
 
-export default ImageSlider
+export default ImageSlider;

@@ -1,6 +1,6 @@
 import './homeDetail.css'
 import {AiFillStar} from "react-icons/ai"
-import { Link } from 'react-router-dom'
+
 import ImageSlider from '../imageSlider/imageslider'
 
 const HomeDetail= ({image,name,rating,location,date,price,daylight})=>{
@@ -8,7 +8,7 @@ const HomeDetail= ({image,name,rating,location,date,price,daylight})=>{
    return (
     <div className="home-group">
     <div  className="home-group-top">
-        <ImageSlider/>
+        <ImageSlider images={[1,2,3,4,5]}/>
     </div>
     <div className="home-group-bottom">
         <p className="home-details home-details--bold">
