@@ -41,7 +41,7 @@ const ImageSlider = ({ images }) => {
 			<div className='slider-window'>
 				{images.map((image) => (
 					<Link className='slider-image'  to='/homes'><img
-            src='/assests/img/homes/cabin.jpeg'
+            src={image}
             className='slider-image' 
 						alt='home picture'
 						style={{ transform: `translateX(${moveby}%)` }}

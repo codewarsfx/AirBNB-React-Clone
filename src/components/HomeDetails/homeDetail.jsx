@@ -3,12 +3,12 @@ import {AiFillStar} from "react-icons/ai"
 
 import ImageSlider from '../imageSlider/imageslider'
 
-const HomeDetail= ({image,name,rating,location,date,price,daylight})=>{
+const HomeDetail= ({images,name,rating,distance,date,price})=>{
 
    return (
     <div className="home-group">
     <div  className="home-group-top">
-        <ImageSlider images={[1,2,3,4,5]}/>
+        <ImageSlider images={images}/>
     </div>
     <div className="home-group-bottom">
         <p className="home-details home-details--bold">
@@ -21,7 +21,7 @@ const HomeDetail= ({image,name,rating,location,date,price,daylight})=>{
             {rating}
         </p>
         <p className="home-details home-details-location">
-            {location}
+            {distance} kilometers away
         </p>
         <p className="home-details home-details-data">
             {date}
@@ -30,7 +30,7 @@ const HomeDetail= ({image,name,rating,location,date,price,daylight})=>{
            <span className="home-details-price">
             ${price}
            </span>
-           {daylight}
+           night
         </p>
     </div>
 </div>
