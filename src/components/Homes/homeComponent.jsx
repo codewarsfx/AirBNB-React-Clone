@@ -1,19 +1,24 @@
 import "./home.css";
-import { home } from "./homeData";
 
 import HomeDetail from "../HomeDetails/homeDetail";
 import { useEffect, useState } from "react";
 import { getHomesData } from "../../firebase";
+import HomeSkeleton from "../SkeletonDetails/skeleton";
 
 const HomeComponent = () => {
-	const [homes, setHomes] = useState(null);
+	const [homes, setHomes] = useState([]);
+	const [isLoading, setIsLoading]= useState(true)
 
 	useEffect(() => {
 		const getHomes = async () => {
 			const homes = await getHomesData()
 
 			if (homes) {
-				setHomes(homes);
+				setTimeout(() => {
+					setHomes(homes);
+					setIsLoading(!isLoading)
+				},2000)
+				
 			}
 		};
 
@@ -23,9 +28,9 @@ const HomeComponent = () => {
 
 	return (
 		<div className='container'>
-			{homes?.map((home) => (
-				<HomeDetail key={home.id} {...home} />
-			))}
+			{ !isLoading ? homes.map((home) => (
+				<HomeDetail key={home.id} {...home}/>
+			)) : Array(9).fill(0).map(()=><HomeSkeleton/>)}
 		</div>
 	);
 };
