@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 import styled from "styled-components";
 
-const ImageSlider = ({ images }) => {
+const ImageSlider = ({ images,id }) => {
 	const [moveby, setmoveby] = useState(0);
 
 	const moveright = () => {
@@ -39,8 +39,8 @@ const ImageSlider = ({ images }) => {
 				</SlideArrowIconLeft>
 			) : null}
 			<div className='slider-window'>
-				{images.map((image) => (
-					<Link className='slider-image'  to='/homes'><img
+				{images.map((image,i) => (
+					<Link key={image+i} className='slider-image'  to={`/homes/${id}`}><img
             src={image}
             className='slider-image' 
 						alt='home picture'

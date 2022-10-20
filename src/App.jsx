@@ -18,7 +18,7 @@ function App() {
               <Route index element = {<Home/>}/>
               <Route path="/register" element={<SignUpSignIn/>} />
          </Route>
-         <Route path="/homes" element={<AirbBnbDetails/>}/>
+        <Route path="homes/:id"element={<AirbBnbDetails />} />
       </Routes>
     </div>
   

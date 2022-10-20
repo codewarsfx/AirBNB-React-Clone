@@ -1,11 +1,5 @@
 import { initializeApp } from "firebase/app";
-import {
-	getAuth,
-	GoogleAuthProvider,
-	signInWithPopup,
-	signOut,
-} from "firebase/auth";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { getFirestore, collection, getDocs, getDoc,doc } from "firebase/firestore";
 
 const prepareData = (snapshot) => { 
     return snapshot.map(doc => {
@@ -31,18 +25,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 
-// intialize auth
-export const auth = getAuth(app);
-
-// initialize cloud firestore
-
-// ----------------SIGN IN WITH GOOGLE FUNCTIONALITY----------------------
-
-const googleAuthProvider = new GoogleAuthProvider();
-
-export const signInWithGoogle = () => signInWithPopup(auth, googleAuthProvider);
-
-export const signout = () => signOut(auth);
 
 // --------------------------FIRESTORE QUERIES----------------------------------
 
@@ -54,5 +36,24 @@ export const getHomesData = async () => {
      return prepareData(querySnapshot.docs)
 };
 
+export const getHomeDetails = async (id) => {
+     
+    const snapshotRef = doc(db, `homes/${id}`);
+    
+    const querySnapshot = await getDoc(snapshotRef)
+
+    if (querySnapshot.exists()) {
+
+        return {
+            id: querySnapshot.id,
+            ...querySnapshot.data()
+        }
+        
+    } else {
+        console.log('document doesnt exist')
+    }
+
+
+}
 
 

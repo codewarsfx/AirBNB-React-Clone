@@ -9,6 +9,7 @@
 }
 .details-description--last {
 	border: none;
+	
 
 }
 
@@ -209,6 +210,11 @@
 	}
 	.first {
 		order: 0;
+		border: none;
+	}
+
+	.second{
+		display: none;
 	}
 
 	.details-checkout {

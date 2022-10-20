@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 import ImageSlider from "../imageSlider/imageslider";
 
-const HomeDetail = ({ images, name, rating, distance, date, price }) => {
+const HomeDetail = ({ images, name, rating, distance, date, price,id }) => {
 	return (
         <motion.div initial={{opacity:0} } animate={{opacity:1,transition:{delay:.5}}} className='home-group'>
 			<div className='home-group-top'>
-				<ImageSlider images={images} />
+				<ImageSlider images={images} id= {id} />
 			</div>
 			<div className='home-group-bottom'>
 				<p className='home-details home-details--bold'>

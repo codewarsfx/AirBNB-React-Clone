@@ -2,7 +2,6 @@ import CloseIcon from "../CloseIcon/closeIcon";
 import "./searchPopSmall.css";
 import { motion } from "framer-motion";
 const SearchPopSmall = ({ toggleModal }) => {
-	console.log(toggleModal);
 
 	const dropIn = {
 		hidden: {

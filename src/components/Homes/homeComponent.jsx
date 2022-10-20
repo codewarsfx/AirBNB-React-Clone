@@ -17,7 +17,7 @@ const HomeComponent = () => {
 				setTimeout(() => {
 					setHomes(homes);
 					setIsLoading(!isLoading)
-				},2000)
+				},1000)
 				
 			}
 		};
@@ -30,7 +30,7 @@ const HomeComponent = () => {
 		<div className='container'>
 			{ !isLoading ? homes.map((home) => (
 				<HomeDetail key={home.id} {...home}/>
-			)) : Array(9).fill(0).map(()=><HomeSkeleton/>)}
+			)) : Array(9).fill(0).map((_,i)=><HomeSkeleton key={i}/>)}
 		</div>
 	);
 };
