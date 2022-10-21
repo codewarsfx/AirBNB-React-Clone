@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     grid-column:span 4;
+    position: relative;
 }
 
 .home-group-top {
@@ -116,6 +117,21 @@
     font-size: 12px;
 }
 
+.bookmark-icon{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    z-index: 1;
+    cursor: pointer;
+}
 
 
-
+.bookmark-icon svg{
+    display: block;
+     fill: rgba(0, 0, 0, 0.4);
+      height: 24px;
+       width: 24px; 
+       stroke:white; 
+       stroke-width: 2; 
+       overflow: visible;
+}
