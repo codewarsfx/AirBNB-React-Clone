@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import Skeleton from "react-loading-skeleton";
 import styled from "styled-components";
+import { HomeContext } from "../../context/homeContext";
 
 
-const SearchButton =  ({toggleModal})=>{
+const SearchButton = ({ toggleModal }) => {
+    
+    const {isLoading} = useContext(HomeContext)
 
     return(
     <>
@@ -13,10 +18,10 @@ const SearchButton =  ({toggleModal})=>{
             </SearchIconContainer>    
             <SearchTextContainer>
                 <SearchText>
-                    Where to?
+                {!isLoading ? "Where to?" : <Skeleton width={75} height={ 20} />}
                 </SearchText>
                 <SearchText>
-                    Anywhere <SmallCircle/> Any week <SmallCircle/>  <span>Add guests</span>
+                        {!isLoading ? "Anywhere" : <Skeleton width={85} height={ 20} />} <SmallCircle/> {!isLoading ? "Any week" : <Skeleton width={65} height={ 20} />} <SmallCircle/>  <span>{!isLoading ? "Add guests" : <Skeleton width={75} height={ 20} />}</span>
                 </SearchText>
             </SearchTextContainer>
             <FilterIconContainer>

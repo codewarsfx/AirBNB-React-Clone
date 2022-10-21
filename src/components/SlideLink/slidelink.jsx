@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import Skeleton from "react-loading-skeleton";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import "react-loading-skeleton/dist/skeleton.css";
+import { HomeContext} from "../../context/homeContext";
 
 const activeLink = { borderColor: "green" };
 const normalLink = { borderColor: "" };
 
 const SideLink = ({ name }) => {
+    const {isLoading} = useContext(HomeContext)
 	return (
 		<SlideElement
 			to={`/${name}`}
@@ -12,9 +17,12 @@ const SideLink = ({ name }) => {
 			className='slide-element-link'
 		>
 			<LinkImageContaier className='slide-img'>
-				<img src={`/assests/img/${name}.png`} alt={`${name}`} />
+				{!isLoading ? <img src={`/assests/img/${name}.png`} alt={`${name}`} /> : <>
+					<Skeleton circle className='skeleton-circle' />
+					
+				</>}
 			</LinkImageContaier>
-			<span>{name}</span>
+			<span>{!isLoading ? name :  <Skeleton width={65} height={10}/>} </span>
 		</SlideElement>
 	);
 };
@@ -70,6 +78,16 @@ const SlideElement = styled(NavLink)`
 const LinkImageContaier = styled.div`
 	width: 24px;
 	height: 24px;
+
+	.skeleton-circle{
+		width: 26px;
+	height: 26px;
+	
+	}
+
+	.skelton-bar{
+		margin-top:1em;
+	}
 
 	img {
 		width: 100%;

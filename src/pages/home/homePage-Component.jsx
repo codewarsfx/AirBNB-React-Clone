@@ -11,10 +11,7 @@ import AnimatedModal from "../../components/animatedModal/animatedModal"
 import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 
 import "./home.css"
-import HomeHero from "../../components/homeDetailsHero/homeDetailsHero"
-import HomeDetailsHeader from "../../components/HomeDetailsHeader/homeDetailsHeader"
-import CheckoutBox from "../../components/CheckoutBox/cheackoutBox"
-import ImageSlider from "../../components/imageSlider/imageslider"
+
 
 
 

@@ -38,7 +38,7 @@ const AirbBnbDetails = () => {
 			<div className='headerBig'>
 				<div className='headerBig-wrapper'>
 					<HeaderLogo />
-					<SearchButton />
+
 					<Navigation />
 				</div>
 			</div>

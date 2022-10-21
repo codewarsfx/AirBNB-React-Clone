@@ -42,7 +42,7 @@ const HeaderContainer = styled.header`
     background-color: #fff;
     z-index: 1000;
     .header-rule{
-        border: .3px solid #DDDDDD;
+        border: .3px solid #f0f0f0;
         display : none;
 
         @media (min-width: 750px){
