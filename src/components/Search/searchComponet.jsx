@@ -125,7 +125,7 @@ const SmallCircle = styled.span`
 `
 
 
-const SearchIconContainer = styled.div`
+export const SearchIconContainer = styled.div`
     display: block;
 
     & > svg{

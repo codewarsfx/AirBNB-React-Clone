@@ -15,6 +15,7 @@ import Navigation from "../../components/Nav/NavComponent";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getHomeDetails } from "../../firebase";
+import Search from "../../components/SearchInDetail/searchindetail";
 const AirbBnbDetails = () => {
 	const { id } = useParams();
 	const [home, setHome] = useState([]);
@@ -38,7 +39,7 @@ const AirbBnbDetails = () => {
 			<div className='headerBig'>
 				<div className='headerBig-wrapper'>
 					<HeaderLogo />
-
+                    <Search/>
 					<Navigation />
 				</div>
 			</div>
