@@ -11,11 +11,9 @@ const FixedHeader = () => {
             if (window.scrollY > 550){
                 setShowHeader(true)
               }
-              else{
+              else {
                 setShowHeader(false)
               }
-            
-           
 
         });
         

@@ -8,7 +8,7 @@ const HomeSkeleton = () => {
 			<div className='home-group'>
 				<Skeleton className='home-group-top' />
 				<div className='home-group-bottom'>
-					<Skeleton width={180} className='loaders' height={20} />
+					<div className="top"><Skeleton width={180} className='loaders' height={20} /> <Skeleton className="rating" width={40} height={20}  /></div>
 					<Skeleton width={110} className='loaders' height={20} />
 					<Skeleton width={90} className='loaders' height={20} />
 					<Skeleton width={60} className='loaders' height={20} />
