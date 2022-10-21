@@ -11,6 +11,7 @@ import AnimatedModal from "../../components/animatedModal/animatedModal"
 import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 
 import "./home.css"
+import FixedHeader from "../../components/FixedHeaderDetails/fixedHeader"
 
 
 
@@ -35,6 +36,7 @@ const Home = ()=>{
             toggleModal={toggleModal}
             small
             component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
+           
            
     </>
    )

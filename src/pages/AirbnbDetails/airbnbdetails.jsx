@@ -16,6 +16,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getHomeDetails } from "../../firebase";
 import Search from "../../components/SearchInDetail/searchindetail";
+import FixedHeader from "../../components/FixedHeaderDetails/fixedHeader";
 const AirbBnbDetails = () => {
 	const { id } = useParams();
 	const [home, setHome] = useState([]);
@@ -36,6 +37,7 @@ const AirbBnbDetails = () => {
 
 	return (
 		<>
+			<FixedHeader/>
 			<div className='headerBig'>
 				<div className='headerBig-wrapper'>
 					<HeaderLogo />
