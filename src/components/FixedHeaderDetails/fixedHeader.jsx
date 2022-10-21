@@ -56,6 +56,9 @@ const Container = styled.header`
 	width: 100%;
     z-index: 1;
     background-color: white;
+    @media (max-width:745px){
+        display: none;
+    }
 `;
 
 const Wrapper = styled.div`
