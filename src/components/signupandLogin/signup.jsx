@@ -25,9 +25,10 @@ const SignUpSignIn = ({ toggleModal, type }) => {
 					<form action='#' className='registeration-form'>
 						<div className='registerion-form-element'>
 							<input
-								type='text'
+								type='email'
 								className='registerion-form-input'
 								placeholder='Email'
+								autoComplete="false"
 							/>
 						</div>
 						<div className='registerion-form-element'>
