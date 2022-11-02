@@ -21,7 +21,7 @@ const SearchButton = ({ toggleModal }) => {
                 {!isLoading ? "Where to?" : <Skeleton width={75} height={ 20} />}
                 </SearchText>
                 <SearchText>
-                        {!isLoading ? "Anywhere" : <Skeleton width={85} height={ 20} />} <SmallCircle/> {!isLoading ? "Any week" : <Skeleton width={65} height={ 20} />} <SmallCircle/>  <span>{!isLoading ? "Add guests" : <Skeleton width={75} height={ 20} />}</span>
+                        {!isLoading ? "Anywhere" : <Skeleton width={85} height={ 20} />} <SmallCircle/> {!isLoading ? "Any week" : <Skeleton width={65} height={ 20} />} <SmallCircle/>  <span>{!isLoading ? "Add guests" : <Skeleton width={55} height={ 20} />}</span>
                 </SearchText>
             </SearchTextContainer>
             <FilterIconContainer>

@@ -239,7 +239,7 @@ const AirbBnbDetails = () => {
 								Show more <BsChevronRight />
 							</a>
 						</div>
-						<div className='details-description'>
+						<div className='details-description details-description--pad'>
 							<h1 className='details-description-title details-description-small'>
 								Where you'll sleep
 							</h1>
@@ -474,6 +474,8 @@ const AirbBnbDetails = () => {
 					</div>
 				</>
 			)}
+			
+			
 		</>
 	);
 };

@@ -374,12 +374,16 @@
 
 	}
 	.item-icon{
-		font-size: 24px;
-		margin: .5em 0 1em 0 ;
+		font-size: 26px;
+		margin: .5em 0 .5em 0 ;
 		color: var(--text-color-dark);
 	}
 	.checkout-text--sec{
 		text-align: left;
+	}
+
+	.details-description--pad{
+		padding: 2em 0;
 	}
 
 }
