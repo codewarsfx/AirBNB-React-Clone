@@ -358,5 +358,29 @@
 		align-items: center;
 	}
 
+	.detail-descriptions-item{
+		width: 200px;
+		height: 150px;
+		padding: 1.5em ;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border: 1px solid var(--light-grey);
+		border-radius: .5em;
+	}
+	.details-description-items{
+		display: flex;
+		gap: 1em;
+
+	}
+	.item-icon{
+		font-size: 24px;
+		margin: .5em 0 1em 0 ;
+		color: var(--text-color-dark);
+	}
+	.checkout-text--sec{
+		text-align: left;
+	}
+
 }
 
