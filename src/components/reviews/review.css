@@ -5,7 +5,7 @@
 }
 
 .review-wrapper{
-    margin: auto;
+    margin: auto ;
     display: flex;
     overflow-x: scroll;
     width: 100vw;
@@ -24,13 +24,15 @@
     border-radius: .5em;
     font-weight: 600;
     background-color: transparent;
+    display: none;
    
 }
 
 .line-rule{
     border: .5px solid var(--light-grey);
     width: 90%; 
-    margin: auto;
+    margin: 3em auto 2em auto;
+    
 }
 
 
@@ -71,14 +73,35 @@ width: 0px;
 }
 
 .review-section{
-    min-width:80vw ;
+    min-width: 83vw ;
     border-radius: .8em;
-    padding: 1em;
+    padding:calc(1vmax + 1em);
     scroll-snap-align: center;
     border: 1px solid var(--light-grey);
+}
+
+.review-section:first-child{
+    margin-left:5vw;
 }
 
 .review-comment{
     line-height: 1.7;
     color: var(--text-color-dark);
 }
+.review-rating{
+    color: var(--text-color-dark);
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-left:5vw;
+    
+}
+
+.rating-icon{
+    font-size: 13x;
+    margin-right: .3em;
+}
+
+
+

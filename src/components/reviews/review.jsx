@@ -1,9 +1,11 @@
 import "./review.css";
+import {AiFillStar} from 'react-icons/ai'
 
 const Review = () => {
     return <>
-    
+        
         <div className="review-container">
+            <p className="review-rating"><AiFillStar className="rating-icon"/> 4.69 . 8 reviews</p>
             <div className="review-wrapper">
                 <div className="review-section">
                     <div className="review-top">
