@@ -479,9 +479,10 @@ const AirbBnbDetails = () => {
 
 						<button className='footer-btn'>Reserve</button>
 					</div>
+					<Review />
 				</>
 			)}
-			<Review />
+		
 		</>
 	);
 };

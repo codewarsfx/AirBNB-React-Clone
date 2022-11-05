@@ -9,13 +9,13 @@ const getRatingPercentage = (rating) => {
 
 const RatingsBar = ({rating=0}) => {
 	return (
-		// <>
-		// 	<div className='rating-bar-item'>
-		// 		<div className='ratings-bar' style={{"--width":`${getRatingPercentage(rating)}%`}}></div>
-        //         <span className='ratings-bar-text'>{rating}</span>
-		// 	</div>
-		// </>
-        <h1>h</h1>
+		<>
+			<div className='rating-bar-item'>
+				<div className='ratings-bar' style={{"--width":`${getRatingPercentage(rating)}%`}}></div>
+                <span className='ratings-bar-text'>{rating}</span>
+			</div>
+		</>
+     
 	);
 };
 

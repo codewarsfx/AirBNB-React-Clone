@@ -1,7 +1,7 @@
 .ratings-bar{
     width: 150px;
     height: 4px;
-    background-color: #ddd;
+    background-color: #eee;
     border-radius: 60px;
     position: relative;
 }

@@ -1,15 +1,63 @@
 import "./review.css";
 import { AiFillStar } from 'react-icons/ai'
 import {FaChevronRight } from 'react-icons/fa'
+import RatingsBar from "../RatingsBar/ratingsBar";
 
 const Review = () => {
     return <>
         
         <div className="review-container">
             <p className="review-rating"><AiFillStar className="rating-icon" /> 4.69 . 8 reviews</p>
-            <div className="review-wrapper">
-                
-            </div>
+            <div className="review-bars-wrapper">
+                <div className=" review-section-bars">
+                    <span className="review-bars-description">
+                        Cleanliness 
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={4.6}/>
+                    </span>
+                </div>
+                <div className="review-section-bars">
+                    <span className="review-bars-description">
+                    Communication
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={3.2}/>
+                    </span>
+                </div>
+                <div className="review-section-bars">
+                    <span className="review-bars-description">
+                    Check-in
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={2.9}/>
+                    </span>
+                </div>
+                <div className=" review-section-bars">
+                    <span className="review-bars-description">
+                    Accuracy
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={4.5}/>
+                    </span>
+                </div>
+                <div className=" review-section-bars">
+                    <span className="review-bars-description">
+                    Location
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={2.7}/>
+                    </span>
+                </div>
+                <div className="review-section-bars">
+                    <span className="review-bars-description">
+                  Value
+                    </span>
+                    <span className="review-bars">
+                        <RatingsBar rating={4.6}/>
+                    </span>
+                </div>
+             </div>
             <div className="review-wrapper">
                 <div className="review-section">
                     <div className="review-top">
