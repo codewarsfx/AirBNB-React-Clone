@@ -2,8 +2,8 @@ import { AiFillStar } from "react-icons/ai";
 import { GiGhostAlly } from "react-icons/gi";
 import { BsChevronRight } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
-import {MdOutlineLocalDining,MdOutlineChildFriendly} from "react-icons/md"
-import {BiBed} from "react-icons/bi"
+import { MdOutlineLocalDining, MdOutlineChildFriendly } from "react-icons/md";
+import { BiBed } from "react-icons/bi";
 
 import "./airbnbdetails.css";
 
@@ -19,6 +19,7 @@ import { useEffect, useState } from "react";
 import { getHomeDetails } from "../../firebase";
 import Search from "../../components/SearchInDetail/searchindetail";
 import FixedHeader from "../../components/FixedHeaderDetails/fixedHeader";
+import Review from "../../components/reviews/review";
 const AirbBnbDetails = () => {
 	const { id } = useParams();
 	const [home, setHome] = useState([]);
@@ -245,20 +246,27 @@ const AirbBnbDetails = () => {
 							</h1>
 							<div className='details-description-items'>
 								<div className='detail-descriptions-item'>
-									<BiBed className="item-icon"/>
+									<BiBed className='item-icon' />
 									<p className='detail-description-text-primary'>Bedroom</p>
-									<p className="checkout-text checkout-text--sec">1 double bed</p>
+									<p className='checkout-text checkout-text--sec'>
+										1 double bed
+									</p>
 								</div>
 								<div className='detail-descriptions-item'>
-									<MdOutlineLocalDining className="item-icon"/>
+									<MdOutlineLocalDining className='item-icon' />
 									<p className='detail-description-text-primary'>Dinning</p>
-									<p className="checkout-text checkout-text--sec"> breakfast and Lunch </p>
-									
+									<p className='checkout-text checkout-text--sec'>
+										{" "}
+										breakfast and Lunch{" "}
+									</p>
 								</div>
 								<div className='detail-descriptions-item'>
-									<MdOutlineChildFriendly className="item-icon"/>
+									<MdOutlineChildFriendly className='item-icon' />
 									<p className='detail-description-text-primary'>Kids</p>
-									<p className="checkout-text checkout-text--sec"> playing area </p>
+									<p className='checkout-text checkout-text--sec'>
+										{" "}
+										playing area{" "}
+									</p>
 								</div>
 							</div>
 						</div>
@@ -266,7 +274,6 @@ const AirbBnbDetails = () => {
 							<h1 className='details-description-title details-description-small'>
 								What this place offers
 							</h1>
-							
 							<div className='details-description-item'>
 								<div className='details-description-item-icon'>
 									<svg
@@ -474,8 +481,7 @@ const AirbBnbDetails = () => {
 					</div>
 				</>
 			)}
-			
-			
+			<Review />
 		</>
 	);
 };

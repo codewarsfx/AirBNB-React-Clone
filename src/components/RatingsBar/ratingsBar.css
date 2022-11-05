@@ -1,0 +1,30 @@
+.ratings-bar{
+    width: 150px;
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 60px;
+    position: relative;
+}
+
+.ratings-bar::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: 100%;
+    background-color: var(--text-color-dark);
+    border-radius: inherit;
+}
+
+.ratings-bar-text{
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-color-dark);
+    margin-left: .5em;
+}
+
+.rating-bar-item{
+    display: flex;
+    align-items: center;
+}

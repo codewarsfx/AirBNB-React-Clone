@@ -14,19 +14,7 @@
     scroll-snap-type: x mandatory;
 }
 
-.review-cta{
-    border: none;
-    width: 90%;
-    padding: .9em;
-    margin:1.5em auto 1.5em auto;
-    display: block;
-    border: 1px solid var(--text-color-dark);
-    border-radius: .5em;
-    font-weight: 600;
-    background-color: transparent;
-    display: none;
-   
-}
+
 
 .line-rule{
     border: .5px solid var(--light-grey);
@@ -62,7 +50,6 @@ width: 0px;
 }
 .review-name{
     font-weight: 600;
-    
     margin: 0;
     color: var(--text-color-dark);
 }
@@ -98,10 +85,91 @@ width: 0px;
     
 }
 
+.review-cta{
+    display: none;
+}
+
 .rating-icon{
     font-size: 13x;
     margin-right: .3em;
 }
+
+
+@media (min-width:750px){
+    .review-section:first-of-type{
+        margin: 2em;
+    }
+    .review-section{
+        border: none;
+        grid-column: span 1;
+        padding: 0;
+        margin: 2em;
+        width: 100%;
+    }
+  
+    .review-container{
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .review-wrapper{
+        display: block;
+        width: 100%;
+    }
+    .review-rating{
+        margin-left: 0;
+    }
+    .line-rule{ 
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1100px){
+   .review-wrapper{
+    display: grid;
+    width: 100%;
+    column-gap: 8%;
+    grid-template-columns: 40% 40%;
+   }
+
+   .review-section{
+    margin:1.5em 0;
+    padding: 0;
+    min-width:0;
+   }
+
+   .review-section:first-of-type{
+     margin: 1em 0 0 0;
+   }
+
+.review-cta{
+    border: none;
+    padding: .9em;
+    display: block;
+    border: 1px solid var(--text-color-dark);
+    border-radius: .5em;
+    font-weight: 600;
+    background-color: transparent;
+}
+
+
+.rating-show{
+    color: var(--text-color-dark);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+.rating-icon--show{
+    font-size: 12px;
+    margin-left: .5em;
+}
+
+
+
+}
+
 
 
 

@@ -1,16 +1,54 @@
 import "./review.css";
-import {AiFillStar} from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai'
+import {FaChevronRight } from 'react-icons/fa'
 
 const Review = () => {
     return <>
         
         <div className="review-container">
-            <p className="review-rating"><AiFillStar className="rating-icon"/> 4.69 . 8 reviews</p>
+            <p className="review-rating"><AiFillStar className="rating-icon" /> 4.69 . 8 reviews</p>
+            <div className="review-wrapper">
+                
+            </div>
             <div className="review-wrapper">
                 <div className="review-section">
                     <div className="review-top">
                         <div className="review-avatar">
-                            <img src="assests/img/users/Annna.jpg" alt="Sierra's Image" />
+                            <img src="/assests/img/users/Annna.jpg" alt="Sierra's Image" />
+                        </div>
+                        <div className="review-details">
+                            <p className="review-name">Sierra</p>
+                            <p className="review-date">October 2022</p>
+                        </div>
+                    </div>
+                    <div className="review-bottom">
+                        <p className="review-comment">
+                        Amazing views and a great space. The breakfast was delicious. Only negative was the neighborhood dogs but that wouldn’t stop us from staying again!!
+                        </p>
+                        <a href="#" className="rating-show">Show more <FaChevronRight className="rating-icon--show"/></a>
+                    </div>
+                </div>
+                <div className="review-section">
+                    <div className="review-top">
+                        <div className="review-avatar">
+                            <img src="/assests/img/users/Annna.jpg" alt="Sierra's Image" />
+                        </div>
+                        <div className="review-details">
+                            <p className="review-name">Sierra</p>
+                            <p className="review-date">October 2022</p>
+                        </div>
+                    </div>
+                    <div className="review-bottom">
+                        <p className="review-comment">
+                        Amazing views and a great space. The breakfast was delicious. Only negative was the neighborhood dogs but that wouldn’t stop us from staying again!!
+                        </p>
+                        <a href="#" className="rating-show">Show more <FaChevronRight className="rating-icon--show"/></a>
+                    </div>
+                </div>
+                <div className="review-section">
+                    <div className="review-top">
+                        <div className="review-avatar">
+                            <img src="/assests/img/users/Annna.jpg" alt="Sierra's Image" />
                         </div>
                         <div className="review-details">
                             <p className="review-name">Sierra</p>
@@ -26,39 +64,7 @@ const Review = () => {
                 <div className="review-section">
                     <div className="review-top">
                         <div className="review-avatar">
-                            <img src="assests/img/users/Annna.jpg" alt="Sierra's Image" />
-                        </div>
-                        <div className="review-details">
-                            <p className="review-name">Sierra</p>
-                            <p className="review-date">October 2022</p>
-                        </div>
-                    </div>
-                    <div className="review-bottom">
-                        <p className="review-comment">
-                        Amazing views and a great space. The breakfast was delicious. Only negative was the neighborhood dogs but that wouldn’t stop us from staying again!!
-                        </p>
-                    </div>
-                </div>
-                <div className="review-section">
-                    <div className="review-top">
-                        <div className="review-avatar">
-                            <img src="assests/img/users/Annna.jpg" alt="Sierra's Image" />
-                        </div>
-                        <div className="review-details">
-                            <p className="review-name">Sierra</p>
-                            <p className="review-date">October 2022</p>
-                        </div>
-                    </div>
-                    <div className="review-bottom">
-                        <p className="review-comment">
-                        Amazing views and a great space. The breakfast was delicious. Only negative was the neighborhood dogs but that wouldn’t stop us from staying again!!
-                        </p>
-                    </div>
-                </div>
-                <div className="review-section">
-                    <div className="review-top">
-                        <div className="review-avatar">
-                            <img src="assests/img/users/Annna.jpg" alt="Sierra's Image" />
+                            <img src="/assests/img/users/Annna.jpg" alt="Sierra's Image" />
                         </div>
                         <div className="review-details">
                             <p className="review-name">Sierra</p>

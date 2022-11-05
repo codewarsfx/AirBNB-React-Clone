@@ -11,8 +11,6 @@ import AnimatedModal from "../../components/animatedModal/animatedModal"
 import SearchPopSmall from "../../components/SearchPopSmall/searchPopSmall"
 
 import "./home.css"
-import FixedHeader from "../../components/FixedHeaderDetails/fixedHeader"
-import Review from "../../components/reviews/review"
 
 
 
@@ -22,7 +20,7 @@ const Home = ()=>{
    const {isModalopen,toggleModal} = useModal()
    return (
     <>  
-            {/* <Header toggleModal={toggleModal} />
+            <Header toggleModal={toggleModal} />
             <Slider/>
             <HomeComponent/>
             <Footer/>
@@ -36,10 +34,8 @@ const Home = ()=>{
             isModalopen={isModalopen} 
             toggleModal={toggleModal}
             small
-            component = { <SearchPopSmall   toggleModal={toggleModal} />}/> */}
-            <Review/>
-           
-           
+            component = { <SearchPopSmall   toggleModal={toggleModal} />}/>
+
     </>
    )
    }
