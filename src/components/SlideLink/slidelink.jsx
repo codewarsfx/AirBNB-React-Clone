@@ -12,7 +12,7 @@ const SideLink = ({ name }) => {
     const {isLoading} = useContext(HomeContext)
 	return (
 		<SlideElement
-			to={`/${name}`}
+			to='/'
 			style={({ isActive }) => (isActive ? activeLink : normalLink)}
 			className='slide-element-link'
 		>

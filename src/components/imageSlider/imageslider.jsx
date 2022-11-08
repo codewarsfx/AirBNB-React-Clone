@@ -66,8 +66,8 @@ const SliderContainer = styled.div`
 `;
 
 const SlideArrowIcon = styled.div`
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
@@ -75,7 +75,7 @@ const SlideArrowIcon = styled.div`
 	border-radius: 50%;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.95);
 	color: black;
 	visibility: hidden;
 	transition: visibility 0.2s ease;
